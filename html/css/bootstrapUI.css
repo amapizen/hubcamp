@@ -235,10 +235,10 @@ a {
   background-color: #5b5a5b; }
 
 .container {
-  border: dotted 1px none; }
+  border: dotted 1px red; }
 
 .container-fluid {
-  border: dotted 1px none; }
+  border: dotted 1px green; }
 
 .services-icon {
   display: inline-block;
@@ -494,6 +494,81 @@ section {
     .timeline .timeline-panel {
       width: 50%;
       float: left; } }
+
+/* Button
+================================================== */
+input[type="submit"] {
+  font-family: "LatoWebBold";
+  outline: 0;
+  word-spacing: .06em;
+  background-color: #fd5c22;
+  border: solid 1px #fb4402;
+  color: #ffffff;
+  padding-left: 48px;
+  padding-right: 48px; }
+  input[type="submit"]:active, input[type="submit"]:focus, input[type="submit"]:hover {
+    background-color: #fe895f;
+    border-color: #fb4402;
+    color: #ffffff; }
+  input[type="submit"]:active:hover {
+    background-color: #e03d02;
+    border-color: #fe9d79; }
+
+.btn, button, input[type="button"], input[type="reset"] {
+  font-family: "LatoWebBold";
+  outline: 0;
+  word-spacing: .06em;
+  transition: color .25s linear, background-color .5s ease-in-out, border-color .25s ease-in; }
+
+.btn-default {
+  font-family: "LatoWebBold";
+  outline: 0;
+  word-spacing: .06em;
+  background-color: #ffffff;
+  border: solid 1px #fd5c22;
+  color: #fd5c22;
+  padding-left: 48px;
+  padding-right: 48px;
+  border-width: 2px; }
+  .btn-default:active, .btn-default:focus, .btn-default:hover {
+    background-color: #ffffff;
+    border-color: #fb4402;
+    color: #191919; }
+  .btn-default:active:hover {
+    background-color: #f1f1f1;
+    border-color: #fe9d79; }
+  .btn-default.disabled, .btn-default[disabled] {
+    border: none;
+    cursor: default;
+    box-shadow: none;
+    text-shadow: none;
+    opacity: 0.33; }
+
+.btn-primary {
+  font-family: "LatoWebBold";
+  outline: 0;
+  word-spacing: .06em;
+  background-color: #fd5c22;
+  border: solid 1px #fb4402;
+  color: #ffffff;
+  padding-left: 48px;
+  padding-right: 48px; }
+  .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+    background-color: #fe895f;
+    border-color: #fb4402;
+    color: #ffffff; }
+  .btn-primary:active:hover {
+    background-color: #e03d02;
+    border-color: #fe9d79; }
+  .btn-primary.disabled, .btn-primary[disabled] {
+    border: none;
+    cursor: default;
+    box-shadow: none;
+    text-shadow: none;
+    opacity: 0.33; }
+
+.btn-rounded {
+  border-radius: 24px; }
 
 /* UI Modules
 ================================================== */
