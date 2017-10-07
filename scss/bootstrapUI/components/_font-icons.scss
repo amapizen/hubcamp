@@ -1,0 +1,61 @@
+/* Font Icons
+================================================== */
+
+  // Vars
+    [data-icon]:before {
+      font-family: "cvwebfont" !important;
+      content: attr(data-icon);
+      font-style: normal !important;
+      font-weight: normal !important;
+      font-variant: normal !important;
+      text-transform: none !important;
+      speak: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    [class^="cvif-"]:before,
+    [class*=" cvif-"]:before {
+      font-family: "cvwebfont" !important;
+      font-style: normal !important;
+      font-weight: normal !important;
+      font-variant: normal !important;
+      text-transform: none !important;
+      speak: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+
+  // Icons
+    .cvif-icon-kogni:before {
+      content: "\e000";
+    }
+    .cvif-icon-managed-services:before {
+      content: "\e001";
+    }
+    .cvif-icon-prism:before {
+      content: "\e002";
+    }
+    .cvif-icon-google-plus:before {
+      content: "\e003";
+    }
+    .cvif-icon-facebook:before {
+      content: "\e004";
+    }
+    .cvif-icon-github:before {
+      content: "\e005";
+    }
+    .cvif-icon-linkedin:before {
+      content: "\e006";
+    }
+    .cvif-icon-twitter:before {
+      content: "\e007";
+    }
+    .cvif-icon-minus-empty:before {
+      content: "\e008";
+    }
+    .cvif-icon-plus-empty:before {
+      content: "\e009";
+    }
