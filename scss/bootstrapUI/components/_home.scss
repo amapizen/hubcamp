@@ -37,7 +37,6 @@
     }
 
 
-
   // News
     .news {
       background-color: $white;
@@ -74,6 +73,12 @@
           }
         }
       }
+      h2.horizontal {
+        background: $vivid-red;
+      }
+      .horizontal {
+        background: $light-green;
+      }
     }
     .ie8 .news .gallery {
       .row-no-bounding {
@@ -98,6 +103,14 @@
         }
       }
     }
+
+
+
+  // General
+    .highlight {
+      background-color: hsla(104, 50, 50, 1);
+    }
+
 
 
   // Services

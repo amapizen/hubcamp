@@ -45,10 +45,18 @@ FrontEnd Stack is built with preprocessor: HTML, CSS (Sass/Compass) and JS.
 
     `npm install`
 
-5. Compile proyect using Grunt
+5. Install Gulp
 
-    `See below`
+    `npm install gulp-cli -g`
 
+6. Compile proyect using Gulp
+
+    `npm install gulp-cli -g`
+
+## Gulp Tasks
+Read Gulp docs to learn how to use (<http://gulpjs.com/>).
+
+ `gulp start`       - Start local web server
 
 ## Grunt Tasks
 Read Grunt docs to learn how to use (<http://gruntjs.com/>).
@@ -67,9 +75,8 @@ Read Grunt docs to learn how to use (<http://gruntjs.com/>).
 
 ## Project Strucuture
 
-* `views`            - Folder that contains views in Jade.
 * `scss`             - Folder that contains styles in Sass.
-* `html`             - Folder that contains fianl solution.
+* `html`             - Folder that contains final solution.
 
 
 ## Happy Coding with Visual Studio Code!

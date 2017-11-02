@@ -567,6 +567,29 @@ input[type="submit"] {
     text-shadow: none;
     opacity: 0.33; }
 
+.btn-secondary {
+  font-family: "LatoWebBold";
+  outline: 0;
+  word-spacing: .06em;
+  background-color: #990000;
+  border: solid 1px #800000;
+  color: #ffffff;
+  padding-left: 48px;
+  padding-right: 48px; }
+  .btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
+    background-color: #d60000;
+    border-color: #fb4402;
+    color: #ffffff; }
+  .btn-secondary:active:hover {
+    background-color: #5c0000;
+    border-color: #fa0000; }
+  .btn-secondary.disabled, .btn-secondary[disabled] {
+    border: none;
+    cursor: default;
+    box-shadow: none;
+    text-shadow: none;
+    opacity: 0.33; }
+
 .btn-rounded {
   border-radius: 24px; }
 
@@ -773,6 +796,10 @@ input[type="submit"] {
     .news .gallery .news-link header .title {
       padding-left: 8px;
       color: #f1f1f1; }
+  .news h2.horizontal {
+    background: #E66000; }
+  .news .horizontal {
+    background: #f2f6dc; }
 
 .ie8 .news .gallery .row-no-bounding.first-child .col-sm-8 {
   padding: 3px; }
@@ -784,6 +811,9 @@ input[type="submit"] {
     padding: 3px; }
 .ie8 .news .gallery .row-no-bounding.second-child .col-sm-4 {
   padding: 0 3px; }
+
+.highlight {
+  background-color: #62bf40; }
 
 .services .bars {
   display: block;

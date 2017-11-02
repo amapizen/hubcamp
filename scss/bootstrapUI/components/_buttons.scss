@@ -43,6 +43,23 @@
         }
       }
     }
+    @mixin btn-secondary {
+      @include btn-core;
+      @include btn-style($deep-red, $dark-red, $white);
+      padding-left: 48px;
+      padding-right: 48px;
+      &:active, &:focus, &:hover {
+        background-color: lighten($deep-red, 12);
+        border-color: $vivid-orange;
+        color: $white;
+      }
+      &:active {
+        &:hover {
+          background-color: darken($deep-red, 12);
+          border-color: lighten($dark-red, 24);
+        }
+      }
+    }
     @mixin btn-default {
       @include btn-core;
       @include btn-style($white, $main-orange, $main-orange);
@@ -76,6 +93,13 @@
     }
     .btn-primary {
       @include btn-primary;
+      &.disabled,
+      &[disabled] {
+        @include btn-disabled;
+      }
+    }
+    .btn-secondary {
+      @include btn-secondary;
       &.disabled,
       &[disabled] {
         @include btn-disabled;
