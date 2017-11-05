@@ -1,0 +1,12 @@
+/* Vendor
+================================================== */
+@import "bootstrapUI/vendor/breakpoint";
+
+@import "bootstrapUI/base/_variables";                      // Variables
+@import "bootstrapUI/base/_reset";                          // Reset
+
+body {
+  padding: 30px;
+  font-family: 'OpenSans', 'Helvetica-neue', 'Helvetica', sans-serif;
+}
+

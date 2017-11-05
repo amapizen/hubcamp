@@ -1,6 +1,5 @@
 .DS_Store
 .sass-cache
-.vagrant
 .vscode
 git-info.txt
 logs/*.log

@@ -10,23 +10,14 @@
     "type": "git",
     "url": "https://github.com/amapizen/"
   },
-  "author": "Enrique Estrada <enrique.estrada@hubcamp.com>",
+  "author": "Enrique Estrada <eestrada@hub-camp.mx>",
   "license": "ISC",
   "devDependencies": {
     "bower": "^1.7.7",
-    "http-server": "^0.9.0",
-    "grunt": "^0.4.5",
-    "grunt-contrib-compass": "^1.0.4",
-    "grunt-contrib-cssmin": "^1.0.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-http-server": "~2.0.0",
-    "grunt-sass": "^1.1.0",
-    "gulp": "^3.9.1",
-    "gulp-webserver": "^0.9.1"
+    "gulp": "^3.9.1"
   },
   "scripts": {
     "postinstall": "bower install",
-    "prestart": "npm install",
-    "start": "http-server -a localhost -p 8000 -c-1"
+    "prestart": "npm install"
   }
 }

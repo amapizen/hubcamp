@@ -1,111 +1,91 @@
 <!DOCTYPE html>
-<!--[if lte IE 8]>
-<html lang='es' class='no-js ie8'><![endif]-->
-<!--[if gt IE 8]>
-<html lang='es' class='no-js ie9'><![endif]-->
-<!--[if !IE]><!-->
 <html lang="es">
-
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>HubCamp - Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="author" href="https://plus.google.com/u/0/">
-    <link rel="canonical" href="http://site.hub-camp.com/">
-
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="favicons/apple-icon-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicons/apple-icon-144x144.png">
-    <link rel="icon" type="image/png" sizes="144x144" href="favicons/android-icon-144x144.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-    <meta name="application-name" content="&amp;nbsp;">
-    <meta name="msapplication-TileColor" content="#FFFFFF">
-    <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
-
-    <link type="text/css" rel="stylesheet" href="css/default.css">
+    <link type="text/css" rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/myStyles.css">
 </head>
+<style>
+    .jumbotron {
+        background-color: rgba(155,155,155,.5);
+    }
+</style>
+
 
 <body>
-    <noscript>Your browser does not support Javascript</noscript>
-    <header class='header'>
-        <div>
-            <h1>Desarrollo Front End</h1>
-            <p>Introducción y técnicas usadas para el desarrollo web.</p>
-        </div>
-        <nav>
-            <ul class='nav'>
-                <li><a id='nav-01' href='#'>Intro</a></li>
-                <li><a id='nav-02' href='#'>Tecnologías</a></li>
-                <li><a id='nav-03' href='#'>Aprender más</a></li>
-                <li><a id='nav-04' href='#'>Recursos</a></li>
-            </ul>
-        </nav>
-    </header>
+    🔥🔥🔥🔥 start javascript 🔥🔥🔥🔥
+    <div class='jumbotron text-center'>
+        <h1 id="foo\bar">Foo Fighters go out</h1>
+        <h2 id="foo:bar">Foo Fighters alv</h2>
+        <h2 class="foo">Foo Fighters al Corona
+            <span>u otro grupo</span>
+        </h2>
 
-    <div class='main-content'>
-        <div id='includedContent'>
-            <section class='head'>
-                <header>
-                    <h2>Front-End</h2>
-                </header>
-            </section>
-            <section class='content'>
-                <article>
-                    <h3>Front-End en un equipo</h3>
-                    <p>
-                        Un desarrollador front-end diseña y/o desarrolla sitios web, aplicaciones web, o aplicaciones nativas corriendo tecnologñias web.
-                    </p>
-                    <p>
-                        Un equipo de desarrollo de sitios web por lo general, contendrá como mínimo, las siguientes roles.
-                    </p>
-                    <ul>
-                        <li>Diseñador Visual (ej., fuentes, colores, espacios, emoción, concepto y tema visual).</li>
-                        <li>Diseñador UI/UX (ej., wireframes, especificar las interacciones y funcionalidad de la interfaz, estructurar información).</li>
-                        <li>Desarrollador Front-End (ej., escribe código que se ejecuta en el cliente, navegador y/o dispositivo).</li>
-                        <li>Desarrollador Back-End (ej., escribe código que se ejecuta en el servidor).</li>
-                    </ul>
-                    <p>Un desarrollador front-end típicamente tiene que saber construir diseño de interfaces enfocado a tecnologías web.</p>
-                    <a id='cta' class='btn-default'>Continuar</a>
-                </article>
-            </section>
-        </div>
+        <button type='button'
+                class='btn btn-primary'
+                onclick='changeText()'>
+            ¿Iré al Corona?
+        </button>
     </div>
 
-
-    <footer class='footer'>
-        <div>
-            <p>HubCamp clases.</p>
-        </div>
-    </footer>
-
-    <!-- Scripts-->
+    <!-- Scripts -->
     <script>
-        document.write('<base href=" ' + document.location + ' " />')
-    </script>
-    <script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
-    <script>
-        if (typeof jQuery == 'undefined') {
-            document.write(unescape("%3Cscript src='js/vendor/jquery/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+        const header = document.querySelector('.foo span');
+        function changeText() {
+            header.innerText = 'Mejor que venga Maluma \n y estemos felices los 4 ';
+            document.body.style.backgroundColor = 'pink';
         }
-    </script>
-    <script>
-        $(document).ready(function() {
-            //$('#headerContent').load('content/header.html');
-            /*
-            $('li.nav-01 a').click(function(e){
-                e.preventDefault();
-                $('#includedContent').load($(this).attr('href'));
-            });*/
 
-            $("#nav-02").click(function(){
-                $("#includedContent").load("content/tecnologias.html");
-            });
-            $("#cta").click(function(){
-                $("#includedContent").load("content/tecnologias.html");
-            });
-        });
+        //console.log('#foo\\bar');
+        //document.querySelector('#foo\\\\bar');
+
+        // strings
+        'this is my string';
+        'my second string';
+        "my name is chris";
+        // numbers
+        10;
+        500;
+        3.14;
+        // booleans (truthy / falsy)
+        true;
+        false;
+
+        // specials
+        undefined;
+        null;
+        NaN;
+        // objects
+        const user = {
+            name: 'Chris',
+            username: 'chrisoncode'
+        };
+        // arrays
+        const users = ['chris', 'nick', 'holly'];
+        const luckyNumbers = [1, 43, 54, 132];
+        const whatever = ['chris', 1, 'holly'];
+
+        const superUsers = [
+            { name: 'chris' },
+            { name: 'nick' },
+            { name: 'holly' }
+        ];
+        console.log(user.name);
+        console.log(superUsers[2].name);
+        console.log(superUsers[2]['name']);
+        // declaring variables
+        var thing        = 'first';
+        const otherThing = {
+            name: 'chris'
+        };
+        let newThing     = 'third';
+        otherThing.name  = 'holly';
+        // ======================
+        let myVariable;
+        myVariable = 'something';
     </script>
+
 </body>
 
 </html>
