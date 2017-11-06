@@ -74,6 +74,7 @@ img {
   font-weight: normal;
   font-style: normal;
   text-rendering: optimizeLegibility; }
+
 @font-face {
   font-family: 'LatoWebItalic';
   src: url("../fonts/Lato/Lato-Italic.eot");
@@ -81,6 +82,7 @@ img {
   font-weight: italic;
   font-style: normal;
   text-rendering: optimizeLegibility; }
+
 @font-face {
   font-family: 'LatoWebLight';
   src: url("../fonts/Lato/Lato-Light.eot");
@@ -88,6 +90,7 @@ img {
   font-weight: normal;
   font-style: normal;
   text-rendering: optimizeLegibility; }
+
 @font-face {
   font-family: 'LatoWebSemibold';
   src: url("../fonts/Lato/Lato-Semibold.eot");
@@ -95,6 +98,7 @@ img {
   font-weight: normal;
   font-style: normal;
   text-rendering: optimizeLegibility; }
+
 @font-face {
   font-family: 'LatoWebBold';
   src: url("../fonts/Lato/Lato-Bold.eot");
@@ -102,6 +106,7 @@ img {
   font-weight: normal;
   font-style: normal;
   text-rendering: optimizeLegibility; }
+
 /* Global
 ================================================== */
 html, body {
@@ -128,6 +133,7 @@ body {
   line-height: 3.25rem;
   margin-top: .75rem;
   margin-bottom: .25rem; }
+
 .header nav {
   border-bottom: 1px solid #222;
   background-color: #ffffff; }
@@ -146,6 +152,7 @@ body {
         .header nav .nav li a:hover, .header nav .nav li a:hover:visited {
           background-color: rgba(155, 155, 155, 0.2);
           cursor: pointer; }
+
 @media (min-width: 768px) {
   .header nav {
     padding: 0 5%; }
@@ -254,4 +261,4 @@ body {
   .wrapper .box6 {
     grid-column: 1 / 5; }
 
-/*# sourceMappingURL=default.css.map */
+/*# sourceMappingURL=.map/default.css.map */

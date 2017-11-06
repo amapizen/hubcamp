@@ -1,20 +1,17 @@
-var gulp      = require('gulp');
-var webserver = require('gulp-webserver');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 
-var server = {
-  host: 'localhost',
-  port: '8001'
-}
+gulp.task('styles', function () {
+  return gulp.src('scss/**/*.scss')
+   .pipe(sourcemaps.init())
+   .pipe(sass().on('error', sass.logError))
+   .pipe(sourcemaps.write('.map'))
+   .pipe(gulp.dest('html/css'));
+ });
 
-gulp.task('webserver', function() {
-  gulp.src( '.' )
-    .pipe(webserver({
-      host: server.host,
-      port: server.port,
-      livereload: true,
-      directoryListing: false,
-      open: true
-    }));
+gulp.task('default',function() {
+  gulp.watch('scss/**/*.scss',['styles']);
 });
 
 

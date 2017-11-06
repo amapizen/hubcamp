@@ -86,6 +86,7 @@ img {
   font-weight: normal;
   font-style: normal;
   text-rendering: optimizeLegibility; }
+
 @font-face {
   font-family: 'LatoWebItalic';
   src: url("../fonts/Lato/Lato-Italic.eot");
@@ -93,6 +94,7 @@ img {
   font-weight: italic;
   font-style: normal;
   text-rendering: optimizeLegibility; }
+
 @font-face {
   font-family: 'LatoWebLight';
   src: url("../fonts/Lato/Lato-Light.eot");
@@ -100,6 +102,7 @@ img {
   font-weight: normal;
   font-style: normal;
   text-rendering: optimizeLegibility; }
+
 @font-face {
   font-family: 'LatoWebSemibold';
   src: url("../fonts/Lato/Lato-Semibold.eot");
@@ -107,6 +110,7 @@ img {
   font-weight: normal;
   font-style: normal;
   text-rendering: optimizeLegibility; }
+
 @font-face {
   font-family: 'LatoWebBold';
   src: url("../fonts/Lato/Lato-Bold.eot");
@@ -114,6 +118,7 @@ img {
   font-weight: normal;
   font-style: normal;
   text-rendering: optimizeLegibility; }
+
 @font-face {
   font-family: 'cvwebfont';
   src: url("../fonts/CV/cvwebfont.eot");
@@ -121,6 +126,7 @@ img {
   font-weight: normal;
   font-style: normal;
   text-rendering: optimizeLegibility; }
+
 /* Global
 =================================================== */
 .wrapper {
@@ -275,6 +281,7 @@ a {
 
 .services-overview a.btn {
   margin-top: 20px; }
+
 @media (min-width: 768px) {
   .services-overview a.btn {
     margin-top: 40px; } }
@@ -283,6 +290,7 @@ a {
   font-family: "LatoWebSemibold";
   font-size: 20px;
   color: #333333; }
+
 .list ul {
   padding: 0;
   margin: 0;
@@ -296,6 +304,7 @@ a {
       content: "• ";
       color: #fd5c22;
       margin-right: 6px; }
+
 @media (min-width: 768px) {
   .list .list .title {
     font-size: 24px; }
@@ -308,6 +317,7 @@ a {
 .stack-list .subheading {
   color: #333333;
   margin-bottom: 16px; }
+
 .stack-list p {
   font-size: 16px;
   color: #6d6d6d;
@@ -317,11 +327,14 @@ a {
 .stack-block article {
   padding: 24px;
   min-height: 90px; }
+
 .stack-block .info header .title {
   font-size: 28px; }
+
 .stack-block .info .content {
   line-height: 140%;
   font-size: 14px; }
+
 @media (min-width: 768px) {
   .stack-block .info .content {
     line-height: 180%;
@@ -336,6 +349,7 @@ a {
   z-index: 1;
   width: calc(100% - 16px);
   position: absolute; }
+
 @media (min-width: 768px) {
   .csstable-container {
     margin: 20px 0 40px;
@@ -355,11 +369,13 @@ a {
     font-family: "LatoWebLight";
     color: #333333;
     line-height: 140%; }
+
 .header .box-container svg.article {
   display: block;
   height: 300px;
   margin: 0 auto;
   width: 100%; }
+
 @media (min-width: 768px) {
   .header .intro-text {
     padding-top: 80px; }
@@ -370,6 +386,7 @@ a {
       white-space: pre; }
     .header .intro-text .heading {
       font-size: 20px; } }
+
 @media (min-width: 992px) {
   .header .intro-text {
     padding-top: 120px; }
@@ -452,8 +469,10 @@ section {
       margin: 0;
       padding: 4px;
       background-color: rgba(25, 25, 25, 0.9); }
+
 .gallery img {
   min-width: 100%; }
+
 @media (min-width: 768px) {
   .gallery .news-link {
     margin-bottom: 0; }
@@ -461,6 +480,7 @@ section {
       font-size: 16px;
       line-height: 20px;
       background-color: transparent; } }
+
 @media (min-width: 992px) {
   .gallery {
     padding: 0 12px; } }
@@ -756,6 +776,7 @@ input[type="submit"] {
   background-size: cover;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.img/hero-image/hero-image-01-min.jpg', sizingMethod='scale');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/hero-image/hero-image-01-min.jpg', sizingMethod='scale')"; }
+
 .hero-image .box1 {
   width: 100%;
   height: 300px;
@@ -805,10 +826,12 @@ input[type="submit"] {
   padding: 3px; }
   .ie8 .news .gallery .row-no-bounding.first-child .col-sm-8 p {
     bottom: 36px; }
+
 .ie8 .news .gallery .row-no-bounding.first-child .col-sm-4 {
   padding-left: 1px; }
   .ie8 .news .gallery .row-no-bounding.first-child .col-sm-4 .col-sm-12 {
     padding: 3px; }
+
 .ie8 .news .gallery .row-no-bounding.second-child .col-sm-4 {
   padding: 0 3px; }
 
@@ -832,8 +855,10 @@ input[type="submit"] {
   .services .bars .rightGreyBars {
     opacity: 0.1;
     position: relative; }
+
 .services.parallax .bars {
   padding-bottom: 0; }
+
 @media (min-width: 768px) {
   .services .bars {
     margin-top: 40px; }
@@ -920,4 +945,4 @@ input[type="submit"] {
         .contact form .row:first-child .col-md-6:last-child {
           padding-left: 32px; } }
 
-/*# sourceMappingURL=bootstrapUI.css.map */
+/*# sourceMappingURL=.map/bootstrapUI.css.map */

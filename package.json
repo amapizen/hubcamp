@@ -4,7 +4,7 @@
   "description": "hubcamp Site",
   "main": "Gruntfile.js",
   "keywords": [
-    "humcamp Refresh"
+    "humcamp"
   ],
   "repository": {
     "type": "git",
@@ -14,7 +14,11 @@
   "license": "ISC",
   "devDependencies": {
     "bower": "^1.7.7",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.4.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "lite-server": "^2.3.0"
   },
   "scripts": {
     "postinstall": "bower install",

@@ -1,8 +1,10 @@
 .DS_Store
 .sass-cache
 .vscode
+package-lock.json
 git-info.txt
 logs/*.log
 node_modules
 npm-debug.log
+html/css/.map
 html/web_components
