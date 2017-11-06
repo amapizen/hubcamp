@@ -8,3 +8,4 @@ node_modules
 npm-debug.log
 html/css/.map
 html/web_components
+web_components
