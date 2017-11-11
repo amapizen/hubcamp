@@ -1,4 +1,14 @@
+{
+  const rainbow = ['red','orange','yellow','green','blue','rebeccapurple','violet'];
 
+  const btnJumbo = document.getElementById('link');
+
+  function changeColor() {
+    //document.body.style.background = 'red';
+    document.body.style.background = rainbow[ Math.floor( 7*Math.random()   ) ];
+  }
+  btnJumbo.addEventListener('click', changeColor);
+}
 
 /* Variables
 ------------------------------------------*/
