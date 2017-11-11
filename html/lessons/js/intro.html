@@ -1,0 +1,608 @@
+<h2 class='text-center'>🔥🔥🔥 JS Esenciales 🔥🔥🔥</h2>
+
+
+<article class='panel panel-default'>
+    <div class='panel-heading' data-toggle='collapse' data-target='#variables-module'>
+        <h4 class='panel-title'>
+            Variables
+            <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+        </h4>
+    </div>
+    <div class='panel-body collapse' id='variables-module'>
+        <p>
+            Las variables pueden empezar con mayúsculas, minúsculas, guión bajo or signo de dólar y contener números, pero nunca empezar con números.
+        </p>
+        <ul>
+            <li>
+                <h4>Const y Let</h4>
+                <code>
+                    const friend = 'Siri';      // Esto no puede ser cambiado.<br>
+                    let bestFriend = 'Cortana'; // Esto sí puede ser cambiado.
+                </code>
+            </li>
+        </ul>
+        <hr class='divider'>
+        <ul>
+            <li>
+                <h4>Asignación directa</h4>
+                <code>
+                    const superman =  'heroe'; <br>
+                    let wonderwoman = superman; <br>
+                    wonderwoman =  'femenina';
+                </code>
+            </li>
+            <li>
+                <h4>Asignación por referencia</h4>
+                <code>
+                    const aquaman =  {value: 'heroe'}; <br>
+                    let flash = aquaman; <br>
+                    flash.value =  'humano';
+                </code>
+            </li>
+        </ul>
+        <div class='panel panel-body'>
+            <label>¿Aquaman = Flash?</label>
+            <div class='input-group aquaman'>
+                <span type='text' class='form-control'>¿Aquaman es humano?</span>
+                <span class='input-group-btn'>
+                    <a id='btnAquaman' class='btn btn-success'>Voy a tener suerte</a>
+                </span>
+            </div>
+        </div>
+        <div class='note note-info'>
+            <h4>Tip</h4>
+            <p>Se recomienda usar <code>const</code> y <code>let</code> para declarar variables ya que son <em>block scoped</em>, esto quiere decir que solo existen en el bloque de código en el que son declaradas.
+                Puede ser <em>scope local</em> (cuando están en el bloque de código) o <em>scope global</em> cuando están fuera de este.
+            </p>
+        </div>
+    </div>
+</article>
+
+
+<article class='panel panel-default'>
+    <div class='panel-heading' data-toggle='collapse' data-target='#type-module'>
+        <h4 class='panel-title'>
+            Tipos de datos
+            <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+        </h4>
+    </div>
+    <div class='panel-body collapse' id='type-module'>
+        <ul>
+            <li>
+                <h4>Strings</h4>
+                <code>
+                    'This is a string'<br>
+                    'Another string'<br>
+                    'My name is Bruce'
+                </code>
+            </li>
+            <li>
+                <h4>Symbols</h4>
+                <code>
+                    30<br>
+                    0.5<br>
+                    3.4444
+                </code>
+            </li>
+            <li>
+                <h4>Numbers</h4>
+                <code>
+                    30<br>
+                    0.5<br>
+                    3.4444
+                </code>
+            </li>
+            <li>
+                <h4>Bolean</h4>
+                <code>
+                    True<br>
+                    False
+                </code>
+            </li>
+            <li>
+                <h4>Undefined</h4>
+            </li>
+            <li>
+                <h4>Null</h4>
+            </li>
+            <li>
+                <h4>Object</h4>
+                <code>
+                    let missingHeroes = ['Superman', 'Green Lantern', 'Shazam', 'Hawkgirl'];
+                </code>
+                <hr class='divider'>
+                <code>
+                    let heroes = [ <br>
+                    &nbsp;&nbsp;{ <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;name: 'Flash', <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;alterEgo: 'Barry Allen', <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;city: 'Central City', <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;power: 'Speed Force', <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;foe: 'Reverse Flash' <br>
+                    &nbsp;&nbsp;}, <br>
+                    &nbsp;&nbsp;{name: 'Wonder Woman'}, <br>
+                    &nbsp;&nbsp;{name: 'Aquaman'}, <br>
+                    &nbsp;&nbsp;{name: 'Batman'}, <br>
+                    &nbsp;&nbsp;{name: 'Cyborg'} <br>
+                    ];
+                </code>
+                <hr class='divider'>
+                <code>
+                    let batman = { <br>
+                    &nbsp;&nbsp;name: 'Batman', <br>
+                    &nbsp;&nbsp;alterEgo: 'Bruce Wayne', <br>
+                    &nbsp;&nbsp;city: 'Gotham', <br>
+                    &nbsp;&nbsp;power: 'Intelligence and money', <br>
+                    &nbsp;&nbsp;foe: 'The Joker' <br>
+                    };
+                </code>
+            </li>
+        </ul>
+
+        <div class='panel panel-body'>
+            <label>Espejito, espejito</label>
+            <div class='input-group hero'>
+                <span type='text' class='form-control'>¿Quién es el mejor héroe?</span>
+                <span class='input-group-btn'>
+                    <a id='btnHero' class='btn btn-success'>Voy a tener suerte</a>
+                </span>
+            </div>
+        </div>
+
+        <div class='note note-info'>
+            <h4>Tip</h4>
+            <p>JavaScript tiene un operador
+                <code>typeof</code> para probar los tipos de valor.
+            </p>
+        </div>
+    </div>
+</article>
+
+
+<article class='panel panel-default'>
+    <div class='panel-heading' data-toggle='collapse' data-target='#strings-module'>
+        <h4 class='panel-title'>
+            Strings
+            <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+        </h4>
+    </div>
+    <div class='panel-body collapse' id='strings-module'>
+        <p>
+            Las variables pueden empezar con mayúsculas, minúsculas, guión bajo or signo de dólar y contener números, pero nunca empezar con números.
+        </p>
+        <ul>
+            <li>
+                <h4>Constructor</h4>
+                <code>
+                    new String('hello nigga');  // Esto crea un objeto String
+                </code>
+            </li>
+            <li>
+                <h4>Literal</h4>
+                <code>
+                    'hello world';  // Esto crea un string
+                </code>
+            </li>
+        </ul>
+        <hr class='separator'>
+        <ul>
+            <li>
+                <h4>Escape characters</h4>
+                <code>
+                    'It\'s me'  // Esto escapa la comilla <br>
+                    "It's me"   // Esto escapa la comilla <br>
+                </code>
+                <br>
+                <h4>Backslash to 'escape'</h4>
+                <code>
+                    '\''    // Esto escapa la comilla <br>
+                    '\"'    // Esto escapa las comilla dobles <br>
+                    '\n'    // Esto escapa las fin de línea <br>
+                    '\r'    // Esto escapa un retorno <br>
+                    '\t'    // Esto escapa una tabulación <br>
+                    '\\'    // Esto escapa una diagonal invertida
+                </code>
+            </li>
+        </ul>
+        <hr class='separator'>
+        <ul>
+            <li>
+                <h4>Propiedades y Métodos</h4>
+                <code>
+                    const name = 'Alexandria'; <br>
+                    name.length; <br>
+                    name['length']:
+                </code>
+            </li>
+            <li>
+                <h4>Propiedades más comunes</h4>
+                <code>
+                    name.toUpperCase();             // Convierte a mayúsculas<br>
+                    name.toLowerCase();             // Convierte a minúsculas<br>
+                    name.charAt(1);                 // Devuleve un caracter en específico<br>
+                    name.indexOf('x');              // Devuleve la primera vez que se uso un caracter<br>
+                    name.lastIndexOf('x');          // Devuleve la última vez que se uso un caracter<br>
+                    name.includes('x');             // Devuelve si existe en el string<br>
+                    name.starstWith('A');           // Devuleve si empieza con un caracter<br>
+                    name.endsWith('x');             // Devuleve si finaliza con un caracter<br>
+                    'JavaScript'.concat.(' rocks');         // Concatena strings<br>
+                    'JavaScript' + ' rocks';                // Concatena strings<br>
+                    '    Pejeee lagartoou     '.trim();     // Remueve espacio en blanco del inicio y final<br>
+                    'Rock'.repeat(2);                       // Repite strings n veces
+                </code>
+            </li>
+        </ul>
+        <hr class='separator'>
+        <ul>
+            <li>
+                <h4>Literal Templates</h4>
+                <code>
+                    let age = 19; <br>
+                    `Yo tendré ${age + 1} el siguiente año`;
+                </code>
+            </li>
+        </ul>
+        <div class='note note-info'>
+            <h4>Tip</h4>
+            <p>Las <em>template literals</em> sirven para lo mismo que los strings normales mas la <strong>interpolación</strong>, esto es que una expresión pueda ser insertada dentro del string.
+            </p>
+        </div>
+    </div>
+</article>
+
+<article class='panel panel-default'>
+    <div class='panel-heading' data-toggle='collapse' data-target='#symbols-module'>
+        <h4 class='panel-title'>
+            Symbols
+            <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+        </h4>
+    </div>
+    <div class='panel-body collapse' id='symbols-module'>
+        <p>
+            Los symbols es un nuevo valor en ES6. Se usan para crear valores únicos.
+        </p>
+        <ul>
+            <li>
+                <h4>Symbols</h4>
+                <code>
+                    const uniqueID = Symbol('hello nigga');  // Agregar descripción
+                </code>
+            </li>
+            <li>
+                <h4>Multivalencia</h4>
+                <code>
+                    const A = Symbol.for('hello nigga');  // Crear valor
+                    const B = Symbol.for('hello nigga');  // Compartir valor
+                </code>
+            </li>
+        </ul>
+    </div>
+</article>
+
+
+<article class='panel panel-default'>
+    <div class='panel-heading' data-toggle='collapse' data-target='#numbers-module'>
+        <h4 class='panel-title'>
+            Numbers
+            <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+        </h4>
+    </div>
+    <div class='panel-body collapse' id='numbers-module'>
+        <p>
+            Los numeros pueden ser <em>integradores</em>(números enteros) o <em>floating point(números con decimales</em>
+        </p>
+        <ul>
+            <li>
+                <h4>Checar que tipo de número</h4>
+                <code>
+                    Number.isInteger(42); <br>
+                    Number.isInteger(3.142); <br>
+                    new Number(3);          // Número creado con constructor
+                </code>
+            </li>
+            <li>
+                <h4>Hexadecimal, Octal(este desde ES6 y Binario)</h4>
+                <code>
+                    0x1AF;       // A representa 10, F respresenta 15<br>
+                    0x47;        // 4 ochos 7 unidades <br>
+                    0b1010;      // 1 eight, 0 cuatro, 1 dos, 0 unidas
+                </code>
+            </li>
+            <li>
+                <h4>Acceder a números (métodos)</h4>
+                <code>
+                    const PI = 3.1415926;    // Crea variables <br>
+                    number.toFixed(3);       // Ahora no hay error <br>
+                    (3.1415926).toFixed(3);  // Usa paréntesis  <br>
+                </code>
+            </li>
+        </ul>
+        <hr class='separator'>
+        <ul>
+            <li>
+                <h4>Operaciones aritméticas</h4>
+                <code>
+                    5 + 4.3;    // Adición <br>
+                    6 - 11;     // Resta <br>
+                    8 * 7;      // Multiplicación <br>
+                    8 / 7;      // División <br>
+                    2 ** 7;     // Exponencial (ES2017) <br>
+                    23 % 6;     // Restante <br>
+                </code>
+            </li>
+            <li>
+                <h4>Modificar variables</h4>
+                <code>
+                    let score = 0;      // Inicializa la variable con el score a 0 <br>
+                    score = score +3;   // Incrementa el valor <br>
+                    score +=3;          // Atajo para incrementar <br>
+                    score -=3;          // Atajo para disminuir <br>
+                    score *=3;          // Atajo para multiplicar <br>
+                    score /=3;          // Atajo para dividir <br>
+                    score %=3;          // Atajo para scar el módulo restante
+                </code>
+            </li>
+            <li>
+                <h4>Incrementar valores</h4>
+                <code>
+                    score ++;           // Regresa el valor e incrementa 1 <br>
+                    score --;           // Regresa el valor y disminuye 1 <br>
+                    ++score;            // Incrementa 1 y regresa el valor <br>
+                    --score;            // Disminuye  1 y regresa el valor<br>
+                    2e308;              // Valor muy grande = Infinito <br>
+                    1/0;                // Números entre cero = Infinito
+                </code>
+            </li>
+            <li>
+                <h4>NaN (Not a Number)</h4>
+                <code>
+                    'hello' * 5;                // Nan <br>
+                    typeof NaN;                 // Number <br>
+                    Number.isFinite(1/0);       // Falso <br>
+                    Number.isFinite(Infinity);  // Falso <br>
+                    Number.isFinite(NaN);       // Falso <br>
+                    Number.isFinite(10.5);      // True
+                </code>
+            </li>
+        </ul>
+        <hr class='separator'>
+        <ul>
+            <li>
+                <h4>Coerción de datos</h4>
+                <code>
+                    '2' * 8             // 16 <br>
+                    '2' + 8             // 28 <br>
+                </code>
+            </li>
+            <li>
+                <h4>Conversión string a números</h4>
+                <code>
+                    Number.('28')                   // 28 Manera correcta<br>
+                    Number.('hello')                // NaN
+                    const answer = +'5';            // 5 No recomendado <br>
+                    typeof answer;                  // number <br>
+                </code>
+            </li>
+            <li>
+                <h4>Conversión números a strings</h4>
+                <code>
+                    String.('28')                   // 28 Manera correcta<br>
+                    const answer = 3 + '';          // '3' No recomendado <br>
+                    typeof answer;                  // string <br>
+                </code>
+            </li>
+            <li>
+                <h4>Parsear números</h4>
+                <code>
+                    parseInt('1010', 2);            // Binario a hexadecimal  <br>                 // 28 Manera correcta<br>
+                    parseInt('2210', 10);           // A decimal  <br>
+                    const address = '902B Tlalpan'; // variable <br>
+                    parseInt(address, 10);          // 902 <br>
+                    parseInt('902.4', 10);          // 902
+                    parseFloat('902.4', 10);        // 902.4
+                </code>
+            </li>
+        </ul>
+    </div>
+</article>
+
+<article class='panel panel-default'>
+    <div class='panel-heading' data-toggle='collapse' data-target='#undefined-module'>
+        <h4 class='panel-title'>
+            Undefined
+            <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+        </h4>
+    </div>
+    <div class='panel-body collapse' id='undefined-module'>
+        <p>
+            Un undefined sucede cuando hay variables de un objeto que no están definidas.
+        </p>
+        <ul>
+            <li>
+                <h4>Undefined</h4>
+                <code>
+                    let x;              // variable sin valor <br>
+                    console.log(x);     // Undefined <br>
+                    typeof x;           // Tipo undefined
+                </code>
+            </li>
+        </ul>
+    </div>
+</article>
+
+<article class='panel panel-default'>
+    <div class='panel-heading' data-toggle='collapse' data-target='#null-module'>
+        <h4 class='panel-title'>
+            Null
+            <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+        </h4>
+    </div>
+    <div class='panel-body collapse' id='null-module'>
+        <p>
+            Los null son que no hay valor, es como un 'debería haber un valor, pero por el momento no'.
+        </p>
+        <ul>
+            <li>
+                <h4>Null</h4>
+                <code>
+                    10 + null;           // 10 null se comporta como cero <br>
+                    10 + undefined;      // NaN undefined no es un número <br>
+                    typeof x;            // Tipo undefined <br>
+
+                    typeof null          // "object" (not "null" for legacy reasons) <br>
+                    typeof undefined     // "undefined" <br>
+                    null  == undefined   // true <br>
+                    null === undefined   // false <br>
+                    null == null         // true <br>
+                    null === null        // true <br>
+                    !null                // true <br>
+                    isNaN(1 + null)      // false <br>
+                    isNaN(1 + undefined) // true
+                </code>
+            </li>
+        </ul>
+    </div>
+</article>
+
+<article class='panel panel-default'>
+    <div class='panel-heading' data-toggle='collapse' data-target='#booleans-module'>
+        <h4 class='panel-title'>
+            Booleans
+            <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+        </h4>
+    </div>
+    <div class='panel-body collapse' id='booleans-module'>
+        <p>
+            Los booleans es la base con la que operan el código binario, true y false. Todo valor en JavaScript es true (truthy).
+        </p>
+        <ul>
+            <li>
+                <h4>Función Boolean</h4>
+                <code>
+                    Boolean('hello');   // true <br>
+                    Boolean(42);        // true <br>
+                    Boolean(0);         // false (cero ausencia de valor) <br>
+                </code>
+            </li>
+            <li>
+                <h4>Valores falsos (Falsy)</h4>
+                <code>
+                    ''          // Single quotes <br>
+                    ""          // Double quotes <br>
+                    ``          // template Literal vacío <br>
+                    0           // cero <br>
+                    -0          // cero negativo <br>
+                    NaN         //  <br>
+                    false       //  <br>
+                    null        //  <br>
+                    undefined   //  <br>
+                    if (document.all) [1]
+                </code>
+            </li>
+        </ul>
+        <div class='note note-info'>
+            <h4>Tip</h4>
+            <p>El document.all se usaba para detección de browser en el pasado <a href="https://html.spec.whatwg.org/#dom-document-all" target=_"blank">HTML specification defines a willful violation</a>
+            </p>
+        </div>
+    </div>
+</article>
+
+<article class='panel panel-default'>
+    <div class='panel-heading' data-toggle='collapse' data-target='#logicalop-module'>
+        <h4 class='panel-title'>
+            Logical Operators
+            <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+        </h4>
+    </div>
+    <div class='panel-body collapse' id='logicalop-module'>
+        <p>
+            Los operadores lógicos son usados como primitivos ya que los resultados de estos dan truthy o falsy.
+            (!!) Es una doble negación.
+        </p>
+        <ul>
+            <li>
+                <h4>! Logical Not</h4>
+                <code>
+                    ! true;             // false <br>
+                    !0;                 // true <br>
+                    !!'';               // false <br>
+                    !!'hello';          // true <br>
+                    !!3;                // true <br>
+                    !!NaN;              // false <br>
+                    !!'false';          // true <br>
+                    !!'0';              // true
+                </code>
+            </li>
+
+            <li>
+                <h4>&& Logical And</h4>
+                <code>
+                    'shoes' && '18';    // 18 truthy <br>
+                    'shoes' && '0';     // 0 falsy
+                </code>
+            </li>
+
+            <li>
+                <h4>|| Logical Or</h4>
+                <code>
+                    'shoes' || 0;       // shoes truthy <br>
+                    NaN || undefined;   // undefined falsy
+                </code>
+            </li>
+
+            <li>
+                <h4>= Equality</h4>
+                <code>
+                    const answer = 5;
+                </code>
+            </li>
+
+            <li>
+                <h4>== Soft Equality</h4>
+                <code>
+                    "1" == true;            // true <br>
+                    "true" == true;         // false <br>
+                    null == undefined;      // true
+                </code>
+            </li>
+
+            <li>
+                <h4>=== Hard Equality</h4>
+                <code>
+                    "1" === true;            // false <br>
+                    "true" === true;         // false <br>
+                    null === undefined;      // false <br>
+                    NaN === NaN;             // false <br>
+                    Number.isNan(Nan);       // true
+                </code>
+            </li>
+
+            <li>
+                <h4>!= Inequality</h4>
+                <code>
+                    16 != '16';              // false <br>
+                    16 !== '16';             // true <br>
+                </code>
+            </li>
+
+            <li>
+                <h4>>= Greather Than and Less than</h4>
+                <code>
+                    16 > 12;                 // true <br>
+                    16 < 12;                 // false <br>
+                    16 >= 12;                // true <br>
+                    16 <= 12;                // false <br>
+                    16 >= '16';              // true <br>
+                    8 > 8 || 8 === 8;        // true <br>
+                    8 > '8' || 8 === 8;      // false <br>
+                </code>
+            </li>
+        </ul>
+    </div>
+</article>
+
+<script>
+    var url = 'lessons/js/intro.js';
+    $.getScript(url);
+</script>

@@ -112,91 +112,69 @@ img {
 html, body {
   height: 100%;
   font-size: 100%;
-  line-height: 1.5;
-  background: #ffffff; }
+  line-height: 1.5; }
 
 body {
   font-family: "LatoWeb";
-  color: #5b5a5b; }
-
-/* General
-================================================== */
-.header, .footer {
-  background-color: rgba(0, 0, 0, 0.98);
-  background: url(../img//base/inflicted.png) repeat center top;
-  color: #fff; }
-  .header div, .footer div {
-    padding: 1rem 5%; }
-
-.header h1 {
-  font-size: 2.5rem;
-  line-height: 3.25rem;
-  margin-top: .75rem;
-  margin-bottom: .25rem; }
-
-.header nav {
-  border-bottom: 1px solid #222;
-  background-color: #ffffff; }
-  .header nav .nav {
-    list-style: none;
-    padding: 0; }
-    .header nav .nav li {
-      display: block; }
-      .header nav .nav li a {
-        text-decoration: none;
-        display: block;
-        padding: .5rem 2rem;
-        margin: 0;
-        font-weight: bold;
-        color: #191919; }
-        .header nav .nav li a:hover, .header nav .nav li a:hover:visited {
-          background-color: rgba(155, 155, 155, 0.2);
-          cursor: pointer; }
-
-@media (min-width: 768px) {
-  .header nav {
-    padding: 0 5%; }
-    .header nav .nav li {
-      display: inline-block; } }
-
-.footer {
-  background: #000000; }
+  color: #5b5a5b;
+  background: #ffffff; }
 
 .main-content {
-  padding: 0; }
-  .main-content .head, .main-content .content {
-    position: relative;
-    padding: 2rem 5%; }
-  .main-content .head {
-    background-color: #f1f1f1; }
-    .main-content .head h2 {
-      font-size: 32px;
-      text-transform: uppercase; }
-  .main-content .content h3, .main-content .content p, .main-content .content ul {
-    margin-bottom: 8px;
-    padding: 8px; }
-  .main-content .content ul {
-    list-style-position: inside;
-    line-height: 1.8; }
+  padding: 0 20px; }
 
-.btn-default {
-  font-family: "LatoWebBold";
-  outline: 0;
-  border: solid 1px gray;
-  word-spacing: .06em;
-  background-color: #f2f6dc;
-  border-color: #abc111;
-  color: #333333;
-  padding: 8px 48px;
-  border-radius: 6px;
-  border-width: 2px;
-  margin: 12px;
-  display: inline-block; }
-  .btn-default:active, .btn-default:focus, .btn-default:hover {
-    background-color: #abc111;
-    color: #ffffff;
-    border-color: #f2f6dc;
-    cursor: pointer; }
+.footer {
+  background: #000000;
+  padding: 20px; }
+
+/* Bootstrap
+================================================== */
+.navbar {
+  background: url(../img//base/inflicted.png) repeat center top; }
+  .navbar .info {
+    color: #F2F2F2;
+    padding: 12px; }
+
+.navbar-header, .navbar-collapse {
+  background-color: #ffffff; }
+
+.panel ul {
+  padding-left: 20px; }
+
+.panel .panel-heading {
+  border-bottom: solid 3px transparent; }
+  .panel .panel-heading a {
+    display: block;
+    text-decoration: none; }
+  .panel .panel-heading[aria-expanded~='true'] {
+    background-color: #56d2dc;
+    border-color: #239fa9; }
+    .panel .panel-heading[aria-expanded~='true'] i:before {
+      content: '\e260'; }
+  .panel .panel-heading i {
+    margin-top: 2px; }
+
+.panel code {
+  font-family: 'Lucida Console', 'Lucida Sans Typewriter', monaco, 'Bitstream Vera Sans Mono', monospace;
+  padding: 4px 12px;
+  background: #f1f1f1;
+  color: #282828;
+  display: inline-block;
+  border-radius: 0 0 3px 3px;
+  border-top: solid 2px #6d6d6d; }
+
+.panel .note {
+  padding: 8px 12px;
+  margin: 20px 0;
+  border: 1px solid #c6c6c6;
+  border-left-width: 5px;
+  border-radius: 3px; }
+  .panel .note h4 {
+    font-weight: 600; }
+  .panel .note.note-info {
+    border-color: #1b809e; }
+
+.jumbotron {
+  background-color: rgba(215, 215, 215, 0.8); }
 
 /* UI
 ================================================== */

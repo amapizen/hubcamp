@@ -1,27 +1,105 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang='es'>
 <head>
-    <meta charset="utf-8">
-    <title>HubCamp - Home</title>
-    <link type="text/css" rel="stylesheet" href="css/vendor/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="css/myStyles.css">
+    <meta charset='utf-8'>
+    <title>HubCamp - JS</title>
+    <link type='text/css' rel='stylesheet' href='css/bootstrap.min.css'>
+    <link type='text/css' rel='stylesheet' href='css/default.css'>
 </head>
-<style>
-    .jumbotron {
-        background-color: rgba(155,155,155,.5);
-    }
-</style>
-
-
 <body>
-    🔥🔥🔥🔥 start javascript 🔥🔥🔥🔥
-    <div class='jumbotron text-center'>
-        <h1 id="foo\bar">Foo Fighters go out</h1>
-        <h2 id="foo:bar">Foo Fighters alv</h2>
-        <h2 class="foo">Foo Fighters al Corona
+    <header role='banner' class='navbar navbar-default'>
+        <div class='info'>
+            <h1>Desarrollo Front End</h1>
+            <p>Introducción y técnicas usadas para el desarrollo web.</p>
+        </div>
+        <div class='navbar-header'>
+            <a href='index' title='Hubcamp' class='navbar-brand'>
+                HubCamp
+                <!--<img id='imgLogo' src='img/hubcamp-logo.svg' alt='Hubcamp' title='Hubcamp'>-->
+            </a>
+            <button role='button' type='button' data-toggle='collapse' data-target='#navbar-collapse' class='navbar-toggle collapsed text-uppercase'>
+                <span class='sr-only'>Menu</span>
+                <div class='pull-right'>
+                    <span class='icon-bar'></span>
+                    <span class='icon-bar'></span>
+                    <span class='icon-bar'></span>
+                </div>
+            </button>
+        </div>
+        <nav role='navigation' aria-expanded='false' id='navbar-collapse' class='collapse navbar-collapse'>
+            <ul class='nav navbar-nav text-uppercase pull-right'>
+                <!--li.hidden-activea(href='#page-top')
+                -->
+                <li class='dropdown'>
+                    <a href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' class='dropdown-toggle'>
+                        Tecnologías
+                        <span class='caret'></span>
+                    </a>
+                    <ul class='dropdown-menu'>
+                        <li>
+                            <a id='nav-01' href='#'>HTML</a>
+                        </li>
+                        <li>
+                            <a id='nav-02' href='#'>JavaScript</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class='dropdown'>
+                    <a href='#'>Ejemplos
+                    </a>
+                </li>
+                <li>
+                    <a href='#'>Recursos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class='main-content'>
+        <section id='includedContent'>
+            <h2 class='text-center'>FrontEnd desde cero</h2>
+            <article class='panel panel-default'>
+                <div class='panel-heading'>
+                    <h4 class='panel-title'>
+                        Desarrollador FrontEnd
+                    </h4>
+                </div>
+                <div class='panel-body'>
+                    <p>
+                        Un desarrollador front-end diseña y/o desarrolla sitios web, aplicaciones web, o aplicaciones nativas ejecutando tecnologías web.
+                    </p>
+                    <p>
+                        Un equipo de desarrollo de sitios web por lo general, contendrá como mínimo, las siguientes roles.
+                    </p>
+                    <ul>
+                        <li>Diseñador Visual (ej., fuentes, colores, espacios, emoción, concepto y tema visual).</li>
+                        <li>Diseñador UI/UX (ej., wireframes, especificar las interacciones y funcionalidad de la interfaz, estructurar información).</li>
+                        <li>Desarrollador Front-End (ej., escribe código que se ejecuta en el cliente, navegador y/o dispositivo).</li>
+                        <li>Desarrollador Back-End (ej., escribe código que se ejecuta en el servidor).</li>
+                    </ul>
+                    <p>
+                        Un desarrollador front-end típicamente tiene que saber construir diseño de interfaces enfocado a tecnologías web.
+                    </p>
+
+                    <div class='note note-info'>
+                        <h4>Tip</h4>
+                        <p>
+                            HTML5 es la plataforma sobre la cual corren todan estas tecnologías web.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <div class='jumbotron text-center' style='display:none;'>
+        <h1 id='foo\bar'>Foo Fighters go out</h1>
+        <h2 id='foo:bar'>Foo Fighters alv</h2>
+        <h2 class='foo'>Foo Fighters al Corona
             <span>u otro grupo</span>
         </h2>
 
+        <a id='link' class='btn btn-default'>Botón</a>
         <button type='button'
                 class='btn btn-primary'
                 onclick='changeText()'>
@@ -29,63 +107,30 @@
         </button>
     </div>
 
-    <!-- Scripts -->
+    <footer class='footer'>
+        <div>
+            HubCamp classrrom.
+        </div>
+    </footer>
+
+    <!-- Scripts-->
     <script>
-        const header = document.querySelector('.foo span');
-        function changeText() {
-            header.innerText = 'Mejor que venga Maluma \n y estemos felices los 4 ';
-            document.body.style.backgroundColor = 'red';
-        }
-
-        //console.log('#foo\\bar');
-        //document.querySelector('#foo\\\\bar');
-
-        // strings
-        'this is my string';
-        'my second string';
-        "my name is chris";
-        // numbers
-        10;
-        500;
-        3.14;
-        // booleans (truthy / falsy)
-        true;
-        false;
-
-        // specials
-        undefined;
-        null;
-        NaN;
-        // objects
-        const user = {
-            name: 'Chris',
-            username: 'chrisoncode'
-        };
-        // arrays
-        const users = ['chris', 'nick', 'holly'];
-        const luckyNumbers = [1, 43, 54, 132];
-        const whatever = ['chris', 1, 'holly'];
-
-        const superUsers = [
-            { name: 'chris' },
-            { name: 'nick' },
-            { name: 'holly' }
-        ];
-        console.log(user.name);
-        console.log(superUsers[2].name);
-        console.log(superUsers[2]['name']);
-        // declaring variables
-        var thing        = 'first';
-        const otherThing = {
-            name: 'chris'
-        };
-        let newThing     = 'third';
-        otherThing.name  = 'holly';
-        // ======================
-        let myVariable;
-        myVariable = 'something';
+        document.write('<base href=" ' + document.location + ' " />')
     </script>
-
+    <script src='https://ajax.microsoft.com/ajax/jquery/jquery-1.9.1.min.js'></script>
+    <script>
+        if (typeof jQuery == 'undefined') {
+            document.write(unescape("%3Cscript src='js/vendor/jquery/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+        }
+    </script>
+    <script src='js/vendor/bootstrap/bootstrap.min.js'></script>
+    <script>
+        $(document).ready(function() {
+            $('#includedContent').load('lessons/js/intro.html');
+            $('#nav-02').click(function(){
+                $('#includedContent').load('lessons/js/intro.html');
+            });
+        });
+    </script>
 </body>
-
 </html>

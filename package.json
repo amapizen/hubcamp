@@ -2,13 +2,13 @@
   "name": "hubcamp-site",
   "version": "0.1.2",
   "description": "hubcamp Site",
-  "main": "Gruntfile.js",
+  "main": "gulpfile.js",
   "keywords": [
     "humcamp"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/amapizen/"
+    "url": "https://github.com/amapizen/hubcamp.git"
   },
   "author": "Enrique Estrada <eestrada@hub-camp.mx>",
   "license": "ISC",

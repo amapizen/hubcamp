@@ -15,109 +15,86 @@
     height: 100%;
     font-size: 100%;
     line-height: 1.5;
-    background: $white;
   }
   body {
     font-family: $latoRegular;
     color: $charcoal-grey;
+    background: $white;
   }
-
-/* General
-================================================== */
-  .header, .footer {
-    background-color: rgba(0, 0, 0, 0.98);
-    background: url(#{$images-path}/base/inflicted.png) repeat center top;
-    color: #fff;
-    div {
-      padding: 1rem 5%;
-    }
-  }
-  .header {
-    h1 {
-      font-size: 2.5rem;
-      line-height: 3.25rem;
-      margin-top: .75rem;
-      margin-bottom: .25rem;
-    }
-    nav {
-      border-bottom: 1px solid #222;
-      background-color: $white;
-      .nav {
-        list-style: none;
-        padding: 0;
-        li {
-          display: block;
-          a {
-            text-decoration: none;
-            display: block;
-            padding: .5rem 2rem;
-            margin: 0;
-            font-weight: bold;
-            color: $rich-black;
-            &:hover, &:hover:visited {
-              background-color: rgba(155, 155, 155, 0.2);
-              cursor: pointer;
-            }
-          }
-        }
-      }
-    }
-    @include breakpoint($tablet) {
-      nav {
-        padding: 0 5%;
-        .nav li {
-          display: inline-block;
-        }
-      }
-    }
+  .main-content {
+    padding: 0 20px;
   }
   .footer {
     background: $black;
+    padding: 20px;
   }
-  .main-content {
-    padding: 0;
-    .head, .content {
-      position: relative;
-      padding: 2rem 5%;
-    }
-    .head {
-      background-color: $off-white;
-      h2 {
-        font-size: 32px;
-        text-transform: uppercase;
-      }
-    }
-    .content {
-      h3, p, ul {
-        margin-bottom: 8px;
-        padding: 8px;
-      }
-      ul {
-        list-style-position: inside;
-        line-height: 1.8;
-      }
+
+
+/* Bootstrap
+================================================== */
+  .navbar {
+    background: url(#{$images-path}/base/inflicted.png) repeat center top;
+    .info {
+      color: #F2F2F2;
+      padding: 12px;
     }
   }
-  .btn-default {
-    font-family: $latoBold;
-    outline: 0;
-    border: solid 1px gray;
-    word-spacing: .06em;
-    background-color: $light-green;
-    border-color: $green;
-    color: $dark-grey;
-    padding: 8px 48px;
-    border-radius: 6px;
-    border-width: 2px;
-    margin: 12px;
-    display: inline-block;
-    &:active, &:focus, &:hover {
-      background-color: $green;
-      color: $white;
-      border-color: $light-green;
-      cursor: pointer;
+
+  .navbar-header, .navbar-collapse {
+    background-color: $white;
+  }
+
+  .panel {
+    ul {
+      padding-left: 20px;
+    }
+    .panel-heading {
+      border-bottom: solid 3px transparent;
+      a {
+        display: block;
+        text-decoration: none;
+      }
+      &[aria-expanded~='true']{
+        background-color: #56d2dc;
+        border-color: darken(#56d2dc, 20);
+        i:before {
+          content: '\e260';
+        }
+      }
+      i {
+        margin-top: 2px;
+      }
+    }
+    code {
+      font-family: 'Lucida Console', 'Lucida Sans Typewriter', monaco, 'Bitstream Vera Sans Mono', monospace;
+      padding: 4px 12px;
+      background: $off-white;
+      color: rgb(40, 40, 40);
+      display: inline-block;
+      border-radius: 0 0 3px 3px;
+      border-top: solid 2px $dim-grey;
+    }
+    .note {
+      padding: 8px 12px;
+      margin: 20px 0;
+      border: 1px solid $soft-grey;
+      border-left-width: 5px;
+      border-radius: 3px;
+      h4 {
+        font-weight: 600;
+      }
+      &.note-info {
+        border-color: #1b809e;
+      }
     }
   }
+
+  .jumbotron {
+    background-color: rgba(215,215,215,.8);
+  }
+
+
+
 
 /* UI
 ================================================== */
