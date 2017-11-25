@@ -1,41 +1,46 @@
-{
-  const rainbow = ['red','orange','yellow','green','blue','rebeccapurple','violet'];
-
-  const btnJumbo = document.getElementById('link');
-
-  function changeColor() {
-    //document.body.style.background = 'red';
-    document.body.style.background = rainbow[ Math.floor( 7*Math.random()   ) ];
-  }
-  btnJumbo.addEventListener('click', changeColor);
-}
-
 /* Variables
 ------------------------------------------*/
 // Global
-let friend        = 'Scarlet Johanson';
+const newFriend        = 'Scarlet Johansson';
 
 // Local
 {
-  const aquaman = {value: 'heroe'};
-  let flash = aquaman;
-  flash.value = 'humano';
+  const bestFriend  = 'Cate Blanchett';
+  let newFriend     = bestFriend;
+  newFriend         = 'Kendall Jenner';
 
-  const bestFriend     = 'Cate Blanchett';
-  let otherFriend      = 'Monica Bellucci';
+  function friendQuestion() {
+    const btnFriend = document.getElementById('btnFriend');
 
-  var newFriend = {
-      name: 'Megan Fox'
-  };
-  newFriend.name       = 'Gal Gadot';
-  //console.log('Tus amigas son: ' + friend + ' y ' + newFriend.name );
+    const bestFriendResult = document.querySelector('.friend .result-1');
+    bestFriendResult.innerText = bestFriend;
 
-  function aquamanIncognita() {
-    const btnAquaman = document.getElementById('btnAquaman');
-    const nameAquaman = document.querySelector('.aquaman .form-control');
-    nameAquaman.innerText = 'Sí, Aquaman es ' + aquaman.value + '. Jojo.';
+    const newFriendResult = document.querySelector('.friend .result-2');
+    newFriendResult.innerText = newFriend;
+
+    const blockInfo = document.querySelector('.friend .blockInfo');
+    blockInfo.style.display ='block';
+    blockInfo.className += ' sucess';
   }
-  btnAquaman.addEventListener('click', aquamanIncognita);
+  btnFriend.addEventListener('click', friendQuestion);
+
+
+  const flash   = {power: 'velocidad'};
+  let aquaman   = flash;
+  aquaman.power = 'respira bajo el agua';
+
+  function aquamanQuestion() {
+    const btnAquaman = document.getElementById('btnAquaman');
+
+    const nameResult = document.querySelector('.aquaman .result');
+    nameResult.innerText = flash.power;
+
+    //$('.blockInfo').show();
+    const blockInfo = document.querySelector('.aquaman .blockInfo');
+    blockInfo.style.display ='block';
+    blockInfo.className += ' sucess';
+  }
+  btnAquaman.addEventListener('click', aquamanQuestion);
 }
 
 
@@ -71,24 +76,82 @@ let friend        = 'Scarlet Johanson';
 
   function greatestHero() {
     const btnHero = document.getElementById('btnHero');
-    const nameHero = document.querySelector('.hero .form-control');
+
+    const nameHero = document.querySelector('.hero .result');
     nameHero.innerText = heroes[3].name + ', obviamente.';
+
+    const blockInfo = document.querySelector('.hero .blockInfo');
+    blockInfo.style.display ='block';
+    blockInfo.className += ' sucess';
   }
   btnHero.addEventListener('click', greatestHero);
 }
 
 
+
 /* Strings
 ------------------------------------------*/
-// Global
-let name = 'Alexandria';
-
 // Local
 {
+  let song = 'When I had the river a dream of the ocean was enough, was so enough.';
+  const start = song.indexOf(',');
+  const end = song.indexOf('.', start+1);
+  const textBlock = song.substring(start+1, end);
 
-  let peje = 'Who is pejes? it\'s me, \n AMLO \\/ your next president';
+  function songText() {
+    const btnSongText = document.getElementById('btnSongText');
 
-  console.log(peje);
+    const textBlockResult = document.querySelector('.songText .result');
+    textBlockResult.innerText = textBlock;
 
+    const blockInfo = document.querySelector('.songText .blockInfo');
+    blockInfo.style.display ='block';
+    blockInfo.className += ' sucess';
+  }
+  btnSongText.addEventListener('click', songText);
 }
-console.log(name.toUppercase);
+
+
+
+/* Numbers
+------------------------------------------*/
+// Local
+{
+  let iphonePrice = 23499;
+
+  function phonePrice() {
+    const btnPhonePrice = document.getElementById('btnPhonePrice');
+
+    let iphonePrice = Number(document.querySelector('.phonePrice #total').value);
+    let savingPrice = iphonePrice * (12/100).toFixed(2);
+    let totalPrice = iphonePrice - savingPrice.toFixed(2);
+
+    const textPhonePrice = document.querySelector('.phonePrice .result-price');
+    textPhonePrice.innerHTML = '$ ' + totalPrice;
+
+    const textPhoneSaving = document.querySelector('.phonePrice .result-saving');
+    textPhoneSaving.innerHTML = '$ ' + savingPrice;
+
+    const blockInfo = document.querySelector('.phonePrice .blockInfo');
+    blockInfo.style.display ='block';
+    blockInfo.className += ' sucess';
+  }
+  btnPhonePrice.addEventListener('click', phonePrice);
+}
+
+
+
+
+/* Jumbotron
+------------------------------------------*/
+// Local
+{
+  const rainbow = ['red','orange','yellow','green','blue','rebeccapurple','violet'];
+  const btnJumbo = document.getElementById('link');
+
+  function changeColor() {
+
+    document.body.style.background = rainbow[ Math.floor(Math.random() * 7)];
+  }
+  btnJumbo.addEventListener('click', changeColor);
+}

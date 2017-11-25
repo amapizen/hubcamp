@@ -1,623 +1,808 @@
-<h2 class='text-center'>🔥🔥🔥 JS Esenciales 🔥🔥🔥</h2>
-
-
-<article class='panel panel-default'>
-    <div class='panel-heading' data-toggle='collapse' data-target='#variables-module'>
-        <h4 class='panel-title'>
-            Variables
-            <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
-        </h4>
-    </div>
-    <div class='panel-body collapse' id='variables-module'>
-        <p>
-            Las variables pueden empezar con mayúsculas, minúsculas, guión bajo or signo de dólar y contener números, pero nunca empezar con números.
-        </p>
-        <ul>
-            <li>
-                <h4>Const y Let</h4>
-                <code>
-                    const friend = 'Siri';      // Esto no puede ser cambiado.<br>
-                    let bestFriend = 'Cortana'; // Esto sí puede ser cambiado.
-                </code>
-            </li>
-        </ul>
-        <hr class='divider'>
-        <ul>
-            <li>
-                <h4>Asignación directa</h4>
-                <code>
-                    const superman =  'heroe'; <br>
-                    let wonderwoman = superman; <br>
-                    wonderwoman =  'femenina';
-                </code>
-            </li>
-            <li>
-                <h4>Asignación por referencia</h4>
-                <code>
-                    const aquaman =  {value: 'heroe'}; <br>
-                    let flash = aquaman; <br>
-                    flash.value =  'humano';
-                </code>
-            </li>
-        </ul>
-        <div class='panel panel-body'>
-            <label>¿Aquaman = Flash?</label>
-            <div class='input-group aquaman'>
-                <span type='text' class='form-control'>¿Aquaman es humano?</span>
-                <span class='input-group-btn'>
-                    <a id='btnAquaman' class='btn btn-success'>Voy a tener suerte</a>
-                </span>
-            </div>
-        </div>
-        <div class='note note-info'>
-            <h4>Tip</h4>
-            <p>Se recomienda usar <code>const</code> y <code>let</code> para declarar variables ya que son <em>block scoped</em>, esto quiere decir que solo existen en el bloque de código en el que son declaradas.
-                Puede ser <em>scope local</em> (cuando están en el bloque de código) o <em>scope global</em> cuando están fuera de este.
-            </p>
-        </div>
-    </div>
-</article>
-
-
-<article class='panel panel-default'>
-    <div class='panel-heading' data-toggle='collapse' data-target='#type-module'>
-        <h4 class='panel-title'>
-            Tipos de datos
-            <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
-        </h4>
-    </div>
-    <div class='panel-body collapse' id='type-module'>
-        <ul>
-            <li>
-                <h4>Strings</h4>
-                <code>
-                    'This is a string'<br>
-                    'Another string'<br>
-                    'My name is Bruce'
-                </code>
-            </li>
-            <li>
-                <h4>Symbols</h4>
-                <code>
-                    30<br>
-                    0.5<br>
-                    3.4444
-                </code>
-            </li>
-            <li>
-                <h4>Numbers</h4>
-                <code>
-                    30<br>
-                    0.5<br>
-                    3.4444
-                </code>
-            </li>
-            <li>
-                <h4>Bolean</h4>
-                <code>
-                    True<br>
-                    False
-                </code>
-            </li>
-            <li>
-                <h4>Undefined</h4>
-            </li>
-            <li>
-                <h4>Null</h4>
-            </li>
-            <li>
-                <h4>Object</h4>
-                <code>
-                    let missingHeroes = ['Superman', 'Green Lantern', 'Shazam', 'Hawkgirl'];
-                </code>
-                <hr class='divider'>
-                <code>
-                    let heroes = [ <br>
-                    &nbsp;&nbsp;{ <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;name: 'Flash', <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;alterEgo: 'Barry Allen', <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;city: 'Central City', <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;power: 'Speed Force', <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;foe: 'Reverse Flash' <br>
-                    &nbsp;&nbsp;}, <br>
-                    &nbsp;&nbsp;{name: 'Wonder Woman'}, <br>
-                    &nbsp;&nbsp;{name: 'Aquaman'}, <br>
-                    &nbsp;&nbsp;{name: 'Batman'}, <br>
-                    &nbsp;&nbsp;{name: 'Cyborg'} <br>
-                    ];
-                </code>
-                <hr class='divider'>
-                <code>
-                    let batman = { <br>
-                    &nbsp;&nbsp;name: 'Batman', <br>
-                    &nbsp;&nbsp;alterEgo: 'Bruce Wayne', <br>
-                    &nbsp;&nbsp;city: 'Gotham', <br>
-                    &nbsp;&nbsp;power: 'Intelligence and money', <br>
-                    &nbsp;&nbsp;foe: 'The Joker' <br>
-                    };
-                </code>
-            </li>
-        </ul>
-
-        <div class='panel panel-body'>
-            <label>Espejito, espejito</label>
-            <div class='input-group hero'>
-                <span type='text' class='form-control'>¿Quién es el mejor héroe?</span>
-                <span class='input-group-btn'>
-                    <a id='btnHero' class='btn btn-success'>Voy a tener suerte</a>
-                </span>
-            </div>
-        </div>
-
-        <div class='note note-info'>
-            <h4>Tip</h4>
-            <p>JavaScript tiene un operador
-                <code>typeof</code> para probar los tipos de valor.
-            </p>
-        </div>
-    </div>
-</article>
-
-
-<article class='panel panel-default'>
-    <div class='panel-heading' data-toggle='collapse' data-target='#strings-module'>
-        <h4 class='panel-title'>
-            Strings
-            <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
-        </h4>
-    </div>
-    <div class='panel-body collapse' id='strings-module'>
-        <p>
-            Las variables pueden empezar con mayúsculas, minúsculas, guión bajo or signo de dólar y contener números, pero nunca empezar con números.
-        </p>
-        <ul>
-            <li>
-                <h4>Constructor</h4>
-                <code>
-                    new String('hello nigga');  // Esto crea un objeto String
-                </code>
-            </li>
-            <li>
-                <h4>Literal</h4>
-                <code>
-                    'hello world';  // Esto crea un string
-                </code>
-            </li>
-        </ul>
-        <hr class='separator'>
-        <ul>
-            <li>
-                <h4>Escape characters</h4>
-                <code>
-                    'It\'s me'  // Esto escapa la comilla <br>
-                    "It's me"   // Esto escapa la comilla <br>
-                </code>
-                <br>
-                <h4>Backslash to 'escape'</h4>
-                <code>
-                    '\''    // Esto escapa la comilla <br>
-                    '\"'    // Esto escapa las comilla dobles <br>
-                    '\n'    // Esto escapa las fin de línea <br>
-                    '\r'    // Esto escapa un retorno <br>
-                    '\t'    // Esto escapa una tabulación <br>
-                    '\\'    // Esto escapa una diagonal invertida
-                </code>
-            </li>
-        </ul>
-        <hr class='separator'>
-        <ul>
-            <li>
-                <h4>Propiedades y Métodos</h4>
-                <code>
-                    const name = 'Alexandria'; <br>
-                    name.length; <br>
-                    name['length']:
-                </code>
-            </li>
-            <li>
-                <h4>Propiedades más comunes</h4>
-                <code>
-                    name.toUpperCase();             // Convierte a mayúsculas<br>
-                    name.toLowerCase();             // Convierte a minúsculas<br>
-                    name.charAt(1);                 // Devuleve un caracter en específico<br>
-                    name.indexOf('x');              // Devuleve la primera vez que se uso un caracter<br>
-                    name.lastIndexOf('x');          // Devuleve la última vez que se uso un caracter<br>
-                    name.includes('x');             // Devuelve si existe en el string<br>
-                    name.starstWith('A');           // Devuleve si empieza con un caracter<br>
-                    name.endsWith('x');             // Devuleve si finaliza con un caracter<br>
-                    'JavaScript'.concat.(' rocks');         // Concatena strings<br>
-                    'JavaScript' + ' rocks';                // Concatena strings<br>
-                    '    Pejeee lagartoou     '.trim();     // Remueve espacio en blanco del inicio y final<br>
-                    'Rock'.repeat(2);                       // Repite strings n veces
-                </code>
-            </li>
-        </ul>
-        <hr class='separator'>
-        <ul>
-            <li>
-                <h4>Literal Templates</h4>
-                <code>
-                    let age = 19; <br>
-                    `Yo tendré ${age + 1} el siguiente año`;
-                </code>
-            </li>
-        </ul>
-        <div class='note note-info'>
-            <h4>Tip</h4>
-            <p>Las <em>template literals</em> sirven para lo mismo que los strings normales mas la <strong>interpolación</strong>, esto es que una expresión pueda ser insertada dentro del string.
-            </p>
-        </div>
-    </div>
-</article>
-
-<article class='panel panel-default'>
-    <div class='panel-heading' data-toggle='collapse' data-target='#symbols-module'>
-        <h4 class='panel-title'>
-            Symbols
-            <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
-        </h4>
-    </div>
-    <div class='panel-body collapse' id='symbols-module'>
-        <p>
-            Los symbols es un nuevo valor en ES6. Se usan para crear valores únicos.
-        </p>
-        <ul>
-            <li>
-                <h4>Symbols</h4>
-                <code>
-                    const uniqueID = Symbol('hello nigga');  // Agregar descripción
-                </code>
-            </li>
-            <li>
-                <h4>Multivalencia</h4>
-                <code>
-                    const A = Symbol.for('hello nigga');  // Crear valor
-                    const B = Symbol.for('hello nigga');  // Compartir valor
-                </code>
-            </li>
-        </ul>
-    </div>
-</article>
-
-
-<article class='panel panel-default'>
-    <div class='panel-heading' data-toggle='collapse' data-target='#numbers-module'>
-        <h4 class='panel-title'>
-            Numbers
-            <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
-        </h4>
-    </div>
-    <div class='panel-body collapse' id='numbers-module'>
-        <p>
-            Los numeros pueden ser <em>integradores</em>(números enteros) o <em>floating point(números con decimales</em>
-        </p>
-        <ul>
-            <li>
-                <h4>Checar que tipo de número</h4>
-                <code>
-                    Number.isInteger(42); <br>
-                    Number.isInteger(3.142); <br>
-                    new Number(3);          // Número creado con constructor
-                </code>
-            </li>
-            <li>
-                <h4>Hexadecimal, Octal(este desde ES6 y Binario)</h4>
-                <code>
-                    0x1AF;       // A representa 10, F respresenta 15<br>
-                    0x47;        // 4 ochos 7 unidades <br>
-                    0b1010;      // 1 eight, 0 cuatro, 1 dos, 0 unidas
-                </code>
-            </li>
-            <li>
-                <h4>Acceder a números (métodos)</h4>
-                <code>
-                    const PI = 3.1415926;    // Crea variables <br>
-                    number.toFixed(3);       // Ahora no hay error <br>
-                    (3.1415926).toFixed(3);  // Usa paréntesis  <br>
-                </code>
-            </li>
-        </ul>
-        <hr class='separator'>
-        <ul>
-            <li>
-                <h4>Operaciones aritméticas</h4>
-                <code>
-                    5 + 4.3;    // Adición <br>
-                    6 - 11;     // Resta <br>
-                    8 * 7;      // Multiplicación <br>
-                    8 / 7;      // División <br>
-                    2 ** 7;     // Exponencial (ES2017) <br>
-                    23 % 6;     // Restante <br>
-                </code>
-            </li>
-            <li>
-                <h4>Modificar variables</h4>
-                <code>
-                    let score = 0;      // Inicializa la variable con el score a 0 <br>
-                    score = score +3;   // Incrementa el valor <br>
-                    score +=3;          // Atajo para incrementar <br>
-                    score -=3;          // Atajo para disminuir <br>
-                    score *=3;          // Atajo para multiplicar <br>
-                    score /=3;          // Atajo para dividir <br>
-                    score %=3;          // Atajo para scar el módulo restante
-                </code>
-            </li>
-            <li>
-                <h4>Incrementar valores</h4>
-                <code>
-                    score ++;           // Regresa el valor e incrementa 1 <br>
-                    score --;           // Regresa el valor y disminuye 1 <br>
-                    ++score;            // Incrementa 1 y regresa el valor <br>
-                    --score;            // Disminuye  1 y regresa el valor<br>
-                    2e308;              // Valor muy grande = Infinito <br>
-                    1/0;                // Números entre cero = Infinito
-                </code>
-            </li>
-            <li>
-                <h4>NaN (Not a Number)</h4>
-                <code>
-                    'hello' * 5;                // Nan <br>
-                    typeof NaN;                 // Number <br>
-                    Number.isFinite(1/0);       // Falso <br>
-                    Number.isFinite(Infinity);  // Falso <br>
-                    Number.isFinite(NaN);       // Falso <br>
-                    Number.isFinite(10.5);      // True
-                </code>
-            </li>
-        </ul>
-        <hr class='separator'>
-        <ul>
-            <li>
-                <h4>Coerción de datos</h4>
-                <code>
-                    '2' * 8             // 16 <br>
-                    '2' + 8             // 28 <br>
-                </code>
-            </li>
-            <li>
-                <h4>Conversión string a números</h4>
-                <code>
-                    Number.('28')                   // 28 Manera correcta<br>
-                    Number.('hello')                // NaN
-                    const answer = +'5';            // 5 No recomendado <br>
-                    typeof answer;                  // number <br>
-                </code>
-            </li>
-            <li>
-                <h4>Conversión números a strings</h4>
-                <code>
-                    String.('28')                   // 28 Manera correcta<br>
-                    const answer = 3 + '';          // '3' No recomendado <br>
-                    typeof answer;                  // string <br>
-                </code>
-            </li>
-            <li>
-                <h4>Parsear números</h4>
-                <code>
-                    parseInt('1010', 2);            // Binario a hexadecimal  <br>                 // 28 Manera correcta<br>
-                    parseInt('2210', 10);           // A decimal  <br>
-                    const address = '902B Tlalpan'; // variable <br>
-                    parseInt(address, 10);          // 902 <br>
-                    parseInt('902.4', 10);          // 902
-                    parseFloat('902.4', 10);        // 902.4
-                </code>
-            </li>
-        </ul>
-    </div>
-</article>
-
-<article class='panel panel-default'>
-    <div class='panel-heading' data-toggle='collapse' data-target='#undefined-module'>
-        <h4 class='panel-title'>
-            Undefined
-            <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
-        </h4>
-    </div>
-    <div class='panel-body collapse' id='undefined-module'>
-        <p>
-            Un undefined sucede cuando hay variables de un objeto que no están definidas.
-        </p>
-        <ul>
-            <li>
-                <h4>Undefined</h4>
-                <code>
-                    let x;              // variable sin valor <br>
-                    console.log(x);     // Undefined <br>
-                    typeof x;           // Tipo undefined
-                </code>
-            </li>
-        </ul>
-    </div>
-</article>
-
-<article class='panel panel-default'>
-    <div class='panel-heading' data-toggle='collapse' data-target='#null-module'>
-        <h4 class='panel-title'>
-            Null
-            <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
-        </h4>
-    </div>
-    <div class='panel-body collapse' id='null-module'>
-        <p>
-            Los null son que no hay valor, es como un 'debería haber un valor, pero por el momento no'.
-        </p>
-        <ul>
-            <li>
-                <h4>Null</h4>
-                <code>
-                    10 + null;           // 10 null se comporta como cero <br>
-                    10 + undefined;      // NaN undefined no es un número <br>
-                    typeof x;            // Tipo undefined <br>
-
-                    typeof null          // "object" (not "null" for legacy reasons) <br>
-                    typeof undefined     // "undefined" <br>
-                    null  == undefined   // true <br>
-                    null === undefined   // false <br>
-                    null == null         // true <br>
-                    null === null        // true <br>
-                    !null                // true <br>
-                    isNaN(1 + null)      // false <br>
-                    isNaN(1 + undefined) // true
-                </code>
-            </li>
-        </ul>
-    </div>
-</article>
-
-<article class='panel panel-default'>
-    <div class='panel-heading' data-toggle='collapse' data-target='#booleans-module'>
-        <h4 class='panel-title'>
-            Booleans
-            <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
-        </h4>
-    </div>
-    <div class='panel-body collapse' id='booleans-module'>
-        <p>
-            Los booleans es la base con la que operan el código binario, true y false. Todo valor en JavaScript es true (truthy).
-        </p>
-        <ul>
-            <li>
-                <h4>Función Boolean</h4>
-                <code>
-                    Boolean('hello');   // true <br>
-                    Boolean(42);        // true <br>
-                    Boolean(0);         // false (cero ausencia de valor) <br>
-                </code>
-            </li>
-            <li>
-                <h4>Valores falsos (Falsy)</h4>
-                <code>
-                    ''          // Single quotes <br>
-                    ""          // Double quotes <br>
-                    ``          // template Literal vacío <br>
-                    0           // cero <br>
-                    -0          // cero negativo <br>
-                    NaN         //  <br>
-                    false       //  <br>
-                    null        //  <br>
-                    undefined   //  <br>
-                    if (document.all) [1]
-                </code>
-            </li>
-        </ul>
-        <div class='note note-info'>
-            <h4>Tip</h4>
-            <p>El document.all se usaba para detección de browser en el pasado <a href="https://html.spec.whatwg.org/#dom-document-all" target=_"blank">HTML specification defines a willful violation</a>
-            </p>
-        </div>
-    </div>
-</article>
-
-<article class='panel panel-default'>
-    <div class='panel-heading' data-toggle='collapse' data-target='#logicalop-module'>
-        <h4 class='panel-title'>
-            Logical Operators
-            <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
-        </h4>
-    </div>
-    <div class='panel-body collapse' id='logicalop-module'>
-        <p>
-            Los operadores lógicos son usados como primitivos ya que los resultados de estos dan truthy o falsy.
-            (!!) Es una doble negación.
-        </p>
-        <ul>
-            <li>
-                <h4>! Logical Not</h4>
-                <code>
-                    ! true;             // false <br>
-                    !0;                 // true <br>
-                    !!'';               // false <br>
-                    !!'hello';          // true <br>
-                    !!3;                // true <br>
-                    !!NaN;              // false <br>
-                    !!'false';          // true <br>
-                    !!'0';              // true
-                </code>
-            </li>
-
-            <li>
-                <h4>&& Logical And</h4>
-                <code>
-                    'shoes' && '18';    // 18 truthy <br>
-                    'shoes' && '0';     // 0 falsy
-                </code>
-            </li>
-
-            <li>
-                <h4>|| Logical Or</h4>
-                <code>
-                    'shoes' || 0;       // shoes truthy <br>
-                    NaN || undefined;   // undefined falsy
-                </code>
-            </li>
-
-            <li>
-                <h4>= Equality</h4>
-                <code>
-                    const answer = 5;
-                </code>
-            </li>
-
-            <li>
-                <h4>== Soft Equality</h4>
-                <code>
-                    "1" == true;            // true <br>
-                    "true" == true;         // false <br>
-                    null == undefined;      // true
-                </code>
-            </li>
-
-            <li>
-                <h4>=== Hard Equality</h4>
-                <code>
-                    "1" === true;            // false <br>
-                    "true" === true;         // false <br>
-                    null === undefined;      // false <br>
-                    NaN === NaN;             // false <br>
-                    Number.isNan(Nan);       // true
-                </code>
-            </li>
-
-            <li>
-                <h4>!= Inequality</h4>
-                <code>
-                    16 != '16';              // false <br>
-                    16 !== '16';             // true <br>
-                </code>
-            </li>
-
-            <li>
-                <h4>>= Greather Than and Less than</h4>
-                <code>
-                    16 > 12;                 // true <br>
-                    16 < 12;                 // false <br>
-                    16 >= 12;                // true <br>
-                    16 <= 12;                // false <br>
-                    16 >= '16';              // true <br>
-                    8 > 8 || 8 === 8;        // true <br>
-                    8 > '8' || 8 === 8;      // false <br>
-                </code>
-            </li>
-        </ul>
-    </div>
-</article>
-
-<div class='jumbotron text-center'>
-    <h1 id='foo\bar'>Foo Fighters go out</h1>
-    <h2 id='foo:bar'>Foo Fighters alv</h2>
-    <h2 class='foo'>Foo Fighters al Corona
-        <span>u otro grupo</span>
-    </h2>
-
-    <a id='link' class='btn btn-default'>Botón</a>
-    <button type='button'
-            class='btn btn-primary'
-            onclick='changeText()'>
-        ¿Iré al Corona?
-    </button>
+<div class='page-header'>
+  <h1>JavaScript
+    <small>🔥 Esenciales</small>
+  </h1>
 </div>
 
+<article class='panel panel-default'>
+  <div class='panel-heading' data-toggle='collapse' data-target='#variables-module'>
+    <h4 class='panel-title'>
+      Variables
+      <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+    </h4>
+  </div>
+  <div class='panel-body collapse' id='variables-module'>
+    <p>
+      Las variables pueden empezar con mayúsculas, minúsculas, guión bajo or signo de dólar y contener números, pero nunca empezar
+      con números.
+    </p>
+    <ul>
+      <li>
+        <h4>Const y Let</h4>
+        <code>
+          const friend &nbsp; = 'Siri';&nbsp;&nbsp;&nbsp; <i>// No puede ser cambiado</i><br>
+          let bestFriend = 'Cortana'; <i>// Sí puede ser cambiado</i>
+        </code><br>
+        <sub>No se deben usar palabras reservadas en las variables<a href='https://www.w3schools.com/js/js_reserved.asp' target='_blank'>ver palabras reservadas</a>.</sub>
+      </li>
+    </ul>
+    <hr class='divider'>
+    <p>
+      Las variables pueden recibir un valor de dos maneras
+    </p>
+    <ul>
+      <li>
+        <h4>Asignación directa</h4>
+        <code>
+          const bestFriend =  'Scarlet Johansson'; <br>
+          let newFriend &nbsp;&nbsp;&nbsp;= bestFriend; <br>
+          newFriend &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=  'Kendall Jenner';
+        </code>
+      </li>
+      <li>
+        <h4>Asignación por referencia</h4>
+        <code>
+          const flash &nbsp;&nbsp;=  {power: 'velocidad'}; <br>
+          let aquaman &nbsp;&nbsp;= flash; <br>
+          aquaman.power =  'respira bajo el agua';
+        </code>
+      </li>
+    </ul>
+    <hr class='divider'>
+    <div class='example'>
+      <p class='lead'>Ejemplos</p>
+      <div class='well friend'>
+        <h4 class='media-heading'>¿Quiénes son tus amigas?</h4>
+
+        <div class='blockInfo collapse'>
+          <p class='form-control'>
+            Tú mejor amiga es
+            <span class='result result-1'></span>
+            y tú nueva amiga es
+            <span class='result result-2'></span>. Suerte.
+          </p>
+          <p>
+            <i class='glyphicon glyphicon-ice-lolly-tasted'></i>
+            El valor de newFriend salió a partir de la variable de bestFriend pero newFriend se declaró independiente.
+          </p>
+        </div>
+        <a id='btnFriend' class='btn btn-circle btn-info'>Voy a tener suerte</a>
+      </div>
+
+      <div class='well aquaman'>
+        <h4 class='media-heading'>¿Cuál es el poder de Flash?</h4>
+
+        <div class='blockInfo collapse'>
+          <p class='form-control'>
+            <span class='result'> </span>
+          </p>
+          <p>
+            <i class='glyphicon glyphicon-ice-lolly-tasted'></i>
+            Flash heredó los mismos poderes de Aquaman.
+          </p>
+        </div>
+        <a id='btnAquaman' class='btn btn-circle btn-info'>Voy a tener suerte</a>
+      </div>
+    </div>
+    <div class='note note-info'>
+      <h4>Tip</h4>
+      <p>Se recomienda usar
+        <code>const</code> y
+        <code>let</code> (ambas en ES6) para declarar variables ya que son
+        <em>block scoped</em>, esto quiere decir que solo existen en un bloque de código. Pueden ser
+        <em>scope local</em> (cuando están en el bloque de código) o
+        <em>scope global</em> cuando están fuera de este.
+        <br> La manera anterior de usar variables
+        <code>var</code> siempre es global.
+      </p>
+    </div>
+  </div>
+</article>
+
+
+<article class='panel panel-default'>
+  <div class='panel-heading' data-toggle='collapse' data-target='#type-module'>
+    <h4 class='panel-title'>
+      Tipos de datos
+      <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+    </h4>
+  </div>
+  <div class='panel-body collapse' id='type-module'>
+    <p>
+      Existen 6 tipos de datos primitivos en JavaScript.
+    </p>
+    <ul>
+      <li>
+        <h4>Strings</h4>
+        <code>
+          'This is a string'<br>
+          'Another string'<br>
+          'My name is Bruce'
+        </code>
+      </li>
+      <li>
+        <h4>Symbols</h4>
+        <code>
+          let foo = Symbol();<br>
+          let bar = Symbol('main bar')<br>
+          foo &nbsp;&nbsp;&nbsp;&nbsp;=== bar; <i>// false</i>
+        </code>
+      </li>
+      <li>
+        <h4>Numbers</h4>
+        <code>
+          30<br>
+          0.5<br>
+          3.4444
+        </code>
+      </li>
+      <li>
+        <h4>Bolean</h4>
+        <code>
+          True<br>
+          False
+        </code>
+      </li>
+      <li>
+        <h4>Undefined</h4>
+      </li>
+      <li>
+        <h4>Null</h4>
+      </li>
+    </ul>
+    <hr class='separator'>
+    <p>
+      Cualquier dato que no sea un primitivo, es un objeto como los arrays, funtions y object.
+    </p>
+    <ul>
+      <li>
+        <h4>Object</h4>
+        <code>
+          let missingHeroes = ['Superman', 'Green Lantern', 'Shazam', 'Hawkgirl'];
+        </code>
+        <hr class='divider'>
+        <code>
+          let heroes = [ <br>
+          &nbsp;&nbsp;{ <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;name: 'Flash', <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;alterEgo: 'Barry Allen', <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;city: 'Central City', <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;power: 'Speed Force', <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;foe: 'Reverse Flash' <br>
+          &nbsp;&nbsp;}, <br>
+          &nbsp;&nbsp;{name: 'Wonder Woman'}, <br>
+          &nbsp;&nbsp;{name: 'Aquaman'}, <br>
+          &nbsp;&nbsp;{name: 'Batman'}, <br>
+          &nbsp;&nbsp;{name: 'Cyborg'} <br>
+          ];
+        </code>
+        <hr class='divider'>
+        <code>
+          let batman = { <br>
+          &nbsp;&nbsp;name: 'Batman', <br>
+          &nbsp;&nbsp;alterEgo: 'Bruce Wayne', <br>
+          &nbsp;&nbsp;city: 'Gotham', <br>
+          &nbsp;&nbsp;power: 'Intelligence and money', <br>
+          &nbsp;&nbsp;foe: 'The Joker' <br>
+          };
+        </code>
+      </li>
+    </ul>
+    <div class='example'>
+      <p class='lead'>Ejemplos</p>
+      <div class='well hero'>
+        <h4 class='media-heading'>¿Espejito, espejito quién es el mejor héroe?</h4>
+        <div class='blockInfo collapse'>
+          <p class='form-control'>
+            <span class='result'></span>
+          </p>
+          <p>
+            <i class='glyphicon glyphicon-ice-lolly-tasted'></i>
+            Se saca el valor del cuarto elemento del array 'heroes'.
+          </p>
+        </div>
+        <a id='btnHero' class='btn btn-circle btn-info'>Voy a tener suerte</a>
+      </div>
+    </div>
+
+
+    <div class='note note-info'>
+      <h4>Tip</h4>
+      <p>JavaScript tiene un operador
+        <code>typeof</code> para probar los tipos de valor.
+      </p>
+    </div>
+  </div>
+</article>
+
+
+<article class='panel panel-default'>
+  <div class='panel-heading' data-toggle='collapse' data-target='#strings-module'>
+    <h4 class='panel-title'>
+      Strings
+      <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+    </h4>
+  </div>
+  <div class='panel-body collapse' id='strings-module'>
+    <p>
+      Las string pueden ser creados de dos maneras, como objeto mediante un constructor y como literal.
+    </p>
+    <ul>
+      <li>
+        <h4>Crear strings</h4>
+        <code>
+          new String('hello moto');&nbsp;  <i>// Objeto string</i><br>
+          'hello infinity universe';  <i>// Literal string</i>
+        </code>
+      </li>
+    </ul>
+    <hr class='separator'>
+    <p>
+      Para escapar carácteres en JS dentro de los strings se hace con diagonal invertida \(backslash), esto es para meter carácteres especiales que JavaScript ignora.
+    </p>
+    <ul>
+      <li>
+        <h4>Escape characters</h4>
+        <code>
+          'It\'s me' <i>// Escapa la comilla </i> <br>
+          "It's me"&nbsp;  <i>// Otra manera de solucionarlo </i> <br>
+        </code>
+        <br>
+        <h4>Backslash to 'escape'</h4>
+        <code>
+          '\''  <i>// Escapa la comilla </i> <br>
+          '\"'  <i>// Escapa las comilla dobles </i> <br>
+          '\n'  <i>// Escapa las fin de línea </i> <br>
+          '\r'  <i>// Escapa un retorno </i> <br>
+          '\t'  <i>// Escapa una tabulación</i> <br>
+          '\\'  <i>// Escapa una diagonal invertida</i>
+        </code>
+      </li>
+    </ul>
+    <hr class='separator'>
+    <p>
+      Las propiedades son características que contienen un valor y para acceder a su valor, los string contienen los siguientes métodos.
+    </p>
+    <ul>
+      <li>
+        <h4>Propiedades y Métodos</h4>
+        <code>
+          const name = 'Alexandria'; <br>
+          name.length; <br>
+          name['length']:
+        </code>
+      </li>
+      <li>
+        <h4>Propiedades más comunes</h4>
+        <code>
+          name.toUpperCase();     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                               <i>// Convierte a mayúsculas</i><br>
+          name.toLowerCase();     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                               <i>// Convierte a minúsculas</i><br>
+          name.charAt(1);         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       <i>// Devuleve un caracter en específico</i><br>
+          name.indexOf('x');      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                         <i>// Devuleve la primera vez que se uso un caracter</i><br>
+          name.indexOf('x', 5);   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                           <i>// Con un parámetro opcional desde donde empezar</i><br>
+          name.lastIndexOf('x');  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                 <i>// Devuleve la última vez que se uso un caracter</i><br>
+          name.substring('x', 'n');  &nbsp;&nbsp;                                                                <i>// Devuleve la última vez que se uso un caracter</i><br>
+          name.split('x');        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             <i>// Divide un array de texto en substrings</i><br>
+
+          name.includes('x');     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                               <i>// Devuelve si existe en el string</i><br>
+          name.starstWith('A');   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                           <i>// Devuleve si empieza con un caracter</i><br>
+          name.endsWith('x');     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                               <i>// Devuleve si finaliza con un caracter</i><br>
+          'JavaScript'.concat.(' rocks');                                                                        <i>// Concatena strings</i><br>
+          'JavaScript' + ' rocks'; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                          <i>// Concatena strings</i><br>
+          ' Pejeee lagartoou '.trim();  &nbsp;&nbsp;                                                             <i>// Remueve espacio en blanco del inicio y final</i><br>
+          'Rock'.repeat(2);       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   <i>// Repite strings n veces</i>
+        </code>
+      </li>
+    </ul>
+    <hr class='separator'>
+    <p>
+      Las literal templates (en ES6) son strings que tienen interpolación, esto es que soportan expresiones dentro del string.
+    </p>
+    <ul>
+      <li>
+        <h4>Literal Templates</h4>
+        <code>
+          let age = 19; <br>
+          `Yo tendré ${age + 1} el siguiente año`;
+        </code>
+      </li>
+    </ul>
+    <div class='example'>
+        <p class='lead'>Ejemplos</p>
+        <div class='well songText'>
+          <h4 class='media-heading'>Extrae el último bloque 'was so enough' de la siguiente frase.</h4>
+          <blockquote>When I had the river a dream of the ocean was enough, was so enough.</blockquote>
+          <div class='blockInfo collapse'>
+            <p class='form-control'>
+              <span class='result'></span>
+            </p>
+            <p>
+              <i class='glyphicon glyphicon-ice-lolly-tasted'></i>
+              Se extrae el bloque de texto después de la coma y antes del punto.
+            </p>
+          </div>
+        </div>
+        <a id='btnSongText' class='btn btn-circle btn-info'>Voy a tener suerte</a>
+      </div>
+    </div>
+
+    <div class='note note-info' style='display:none;'>
+      <h4>Tip</h4>
+      <p>Las
+        <em>template literals</em> sirven para lo mismo que los strings normales mas la
+        <strong>interpolación</strong>, esto es que una expresión pueda ser insertada dentro del string.
+      </p>
+    </div>
+  </div>
+</article>
+
+<article class='panel panel-default'>
+  <div class='panel-heading' data-toggle='collapse' data-target='#symbols-module'>
+    <h4 class='panel-title'>
+      Symbols
+      <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+    </h4>
+  </div>
+  <div class='panel-body collapse' id='symbols-module'>
+    <p>
+      Los symbols es un nuevo valor en ES6, se usan para crear valores únicos.
+    </p>
+    <ul>
+      <li>
+        <h4>Symbols</h4>
+        <code>
+          const uniqueID = Symbol('Descripción');  <i>// Agregar descripción</i>
+        </code>
+      </li>
+    </ul>
+  </div>
+</article>
+
+
+<article class='panel panel-default'>
+  <div class='panel-heading' data-toggle='collapse' data-target='#numbers-module'>
+    <h4 class='panel-title'>
+      Numbers
+      <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+    </h4>
+  </div>
+  <div class='panel-body collapse' id='numbers-module'>
+    <p>
+      Los numeros pueden ser <em>integers</em> (números enteros) o <em>floating point</em> (números con decimales).
+    </p>
+    <ul>
+      <li>
+        <h4>Con isIntegrer se checa que tipo de número es</h4>
+        <code>
+          Number.isInteger(42); <br>
+          Number.isInteger(3.142);
+        </code>
+      </li>
+      <li>
+        <h4>Los números pueden ser creados de dos maneras</h4>
+        <code>
+          new Number(3);                      <i>// Objeto número</i><br>
+          3.1415926;&nbsp;&nbsp;&nbsp;&nbsp;  <i>// Literal número</i><br>
+        </code>
+      </li>
+      <li>
+        <h4>JS soporta números decimal, hexadecimal, octal, binario y exponencial</h4>
+        <code>
+          2000;&nbsp;&nbsp;       <i>// Decimal (es el default)</i><br>
+          0xAF;&nbsp;&nbsp;       <i>// Hexadecimal 175 (A representa 10, F respresenta 15)</i><br>
+          0o47;&nbsp;&nbsp;       <i>// Octal 39 (4 ochos 7 unidades)</i><br>
+          0b1010;                 <i>// Binario 10 (1 ocho, 0 cuatro, 1 dos, 0 unidades)</i><br>
+          2e6;&nbsp;&nbsp;&nbsp;  <i>// Exponencial 2000000 (2 con 6 ceros)</i>
+        </code>
+      </li>
+      <li>
+        <h4>Acceder a números (métodos)</h4>
+        <code>
+          const PI = 3.1415926;&nbsp;&nbsp;                 <i>// Crea variable </i><br>
+          number.toFixed(3);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <i>// Por variable </i><br>
+          (3.1415926).toFixed(3);                           <i>// Por paréntesis</i>
+        </code><br>
+        <sub>* El método toFixed devuelve un valor que es string.</sub>
+      </li>
+    </ul>
+    <hr class='separator'>
+    <ul>
+      <li>
+        <h4>Operaciones aritméticas</h4>
+        <code>
+          5 + 4.3;&nbsp;&nbsp;&nbsp;&nbsp;                  <i>// Adición</i><br>
+          6 - 11;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             <i>// Resta</i><br>
+          8 * 7;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <i>// Multiplicación</i><br>
+          8 / 7;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <i>// División</i><br>
+          2 ** 7;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             <i>// Exponencial (ES2017)</i><br>
+          23 % 6;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             <i>// Restante</i><br>
+          (10 + 4) * 5                                      <i>// Agrupar</i>
+        </code><br>
+        <sub>* Se recomienda agrupar por paréntesis las operaciones entre sí debido al orden de precedencia <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence' target='_blank'>ver orden</a>.</sub>
+      </li>
+    </ul>
+    <hr class='separator'>
+    <ul>
+      <li>
+        <h4>Modificar variables</h4>
+        <code>
+          let score = 0;<br>
+          score = score +3;<br>
+          score +=3;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <i>// Incrementa</i><br>
+          score -=3;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <i>// Disminuye </i><br>
+          score *=3;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <i>// Multiplica </i><br>
+          score /=3;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <i>// Divide </i><br>
+          score %=3;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <i>// Módulo restante</i>
+        </code>
+      </li>
+      <li>
+        <h4>Auto incrementar o decrementar</h4>
+        <code>
+          score ++;           <i>// Regresa el valor e incrementa 1 </i><br>
+          score --;           <i>// Regresa el valor y disminuye 1 </i><br>
+          ++score;&nbsp;      <i>// Incrementa 1 y regresa el valor </i><br>
+          --score;&nbsp;      <i>// Disminuye  1 y regresa el valor </i>
+        </code>
+      </li>
+      <li>
+        <h4>El infinito en JS sucede por dos motivos</h4>
+        <code>
+          2e308;              <i>// Número muy grande = Infinito </i><br>
+          1/0;&nbsp;&nbsp;    <i>// Número divididos entre cero = Infinito </i>
+        </code>
+      </li>
+      <li>
+        <h4>NaN (Not a Number)</h4>
+        <code>
+          let number = 'hello' * 5;                      <br>
+          number;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <i>// Nan </i>
+        </code><br>
+        <sub>
+          NaN es un error de valor cuando una operación is procesada y el resultado no es un numérico.
+        </sub>
+      </li>
+      <li>
+        <h4>Con el método <em>Number.isFinite</em> podemos checar si un número es Infinity, -Infinity or NaN</h4>
+        <code>
+          Number.isFinite(1/0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       <i>// False </i><br>
+          Number.isFinite(Infinity);                                <i>// False </i><br>
+          Number.isFinite(NaN);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       <i>// False </i><br>
+          Number.isFinite(10.5);&nbsp;&nbsp;&nbsp;&nbsp;            <i>// True </i>
+        </code><br>
+      </li>
+    </ul>
+    <hr class='separator'>
+    <p>
+      La coerción de datos pasa cuando hay varios tipos de datos y JS los convierte a un mismo tipo.
+    </p>
+    <ul>
+      <li>
+        <h4>Coerción de datos</h4>
+        <code>
+          '2' * 8&nbsp;&nbsp;&nbsp;             <i>// 16 </i><br>
+          '2' + 8&nbsp;&nbsp;&nbsp;             <i>// 28 </i>
+        </code>
+      </li>
+      <li>
+        <h4>Conversión string a números</h4>
+        <code>
+          let myNumber = Number('28');                                                                <i>// Convierte myNumber a un tipo Number </i><br>
+          typeof myNumber;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <i>// Devuelve un number </i><br>
+          let otherNumber.('hello');&nbsp;&nbsp;                                                      <i>// Si no puede convertir  anúmero devuelve un NaN</i><br>
+          let bigNumber = +'500';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                       <i>// No se recomienda </i>
+        </code>
+      </li>
+      <li>
+        <h4>Conversión números a strings</h4>
+        <code>
+          let text = String(28);&nbsp;                                                         <i>// Convierte text a un tipo String</i><br>
+          typeof text;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       <i>// Devuelve un string </i><br>
+          let otherText = 3 + '';                                                              <i>// No se recomienda </i>
+        </code>
+      </li>
+    </ul>
+    <hr class='separator'>
+    <p>
+      La funciones de parsear son usadas para convertir de una representación en texto (ej. hexadecimal) de un valor numéricoa a un número.
+    </p>
+    <ul>
+      <li>
+        <h4>Parsear números</h4>
+        <code>
+          parseInt('1010', 2);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <i>// De binario a decimal </i><br>
+          parseInt('0x1AF', 16);&nbsp;&nbsp;&nbsp;               <i>// De hexadcimal a decimal </i><br>
+          parseInt('10111', 16);&nbsp;&nbsp;&nbsp;               <i>// De binario a hexadecimal</i><br>
+          let address = '902B Bis';                              <i>// Convierte a número </i><br>
+          parseInt(address, 10);&nbsp;&nbsp;&nbsp;               <i>// Devuleve solo números, ignorando textos </i><br>
+          parseInt('90.4', 10);&nbsp;&nbsp;&nbsp;&nbsp;          <i>// Ignora los puntos decimales </i><br>
+          parseFloat('90.4', 10);&nbsp;&nbsp;                    <i>// Mantiene los puntos decimales 902.4 </i>
+        </code>
+      </li>
+    </ul>
+    <div class='example'>
+      <p class='lead'>Ejemplos</p>
+      <div class='well phonePrice'>
+        <h4 class='media-heading'>Calcula el total a pagar del Iphone</h4>
+        <table class='table'>
+          <caption>Descuento de 12% con AmigoKit.</caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Celular</th>
+              <th>Compañia</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Iphone X</td>
+              <td>Apple</td>
+              <td>
+                  $ <input readonly id='total' value='23499'>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Galaxy S8+</td>
+              <td>Samsung</td>
+              <td>$ 19699</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>P10 Plus</td>
+              <td>Huawei</td>
+              <td>$ 15229</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class='blockInfo collapse'>
+          <p class='form-control'>
+            El precio total del Iphone X con descuento es:
+            <span class='result result-price'></span><br>
+            Tu ahorro es:
+            <span class='result result-saving'></span>
+          </p>
+          <p>
+            <i class='glyphicon glyphicon-ice-lolly-tasted'></i>
+            Para obtener el porcentaje, este se divide entre 100.
+          </p>
+        </div>
+        <a id='btnPhonePrice' class='btn btn-circle btn-info'>Voy a tener suerte</a>
+      </div>
+    </div>
+</article>
+
+<article class='panel panel-default'>
+  <div class='panel-heading' data-toggle='collapse' data-target='#undefined-module'>
+    <h4 class='panel-title'>
+      Undefined
+      <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+    </h4>
+  </div>
+  <div class='panel-body collapse' id='undefined-module'>
+    <p>
+      Un undefined sucede cuando hay variables de un objeto que no están definidas.
+    </p>
+    <ul>
+      <li>
+        <h4>Undefined</h4>
+        <code>
+          let x;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <i>// variable sin valor </i><br>
+          console.log(x);                                                     <i>// Undefined </i><br>
+          typeof x;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                       <i>// Tipo undefined </i>
+        </code>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class='panel panel-default'>
+  <div class='panel-heading' data-toggle='collapse' data-target='#null-module'>
+    <h4 class='panel-title'>
+      Null
+      <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+    </h4>
+  </div>
+  <div class='panel-body collapse' id='null-module'>
+    <p>
+      Los null son objetos que no contienen valor, es como un 'debería haber un valor, pero por el momento no'.
+    </p>
+    <ul>
+      <li>
+        <h4>Null</h4>
+        <code>
+          10 + null;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          <i>// 10 porque null se comporta como cero </i><br>
+          10 + undefined;&nbsp;&nbsp;&nbsp;&nbsp;                                   <i>// NaN porque undefined no es un número </i><br>
+          typeof xor;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               <i>// Tipo undefined </i><br>
+
+          typeof null&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               <i>// "object" (not "null" for legacy reasons) </i><br>
+          typeof undefined&nbsp;&nbsp;&nbsp;                                        <i>// "undefined" </i><br>
+          null == undefined&nbsp;&nbsp;                                             <i>// true </i><br>
+          null === undefined&nbsp;                                                  <i>// false </i><br>
+          null == null&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                    <i>// true </i><br>
+          null === null&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                         <i>// true </i><br>
+          !null&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                    <i>// true </i><br>
+          isNaN(1 + null)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                             <i>// false </i><br>
+          isNaN(1 + undefined)                                                      <i>// true </i>
+        </code>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class='panel panel-default'>
+  <div class='panel-heading' data-toggle='collapse' data-target='#booleans-module'>
+    <h4 class='panel-title'>
+      Booleans
+      <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+    </h4>
+  </div>
+  <div class='panel-body collapse' id='booleans-module'>
+    <p>
+      Los booleans es la base con la que operan el código binario, true y false. Todo valor en JavaScript es true (truthy).
+    </p>
+    <ul>
+      <li>
+        <h4>Función Boolean</h4>
+        <code>
+          Boolean('hell');                              <i>// true </i><br>
+          Boolean(42);&nbsp;&nbsp;&nbsp;&nbsp;          <i>// true </i><br>
+          Boolean(0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <i>// false (cero ausencia de valor) </i><br>
+        </code>
+      </li>
+      <li>
+        <h4>Valores falsos (Falsy)</h4>
+        <code>
+          ''&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          <i>// Single quotes </i><br>
+          ""&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          <i>// Double quotes </i><br>
+          ``&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          <i>// template Literal vacío </i><br>
+          0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <i>// cero </i><br>
+          -0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          <i>// cero negativo </i><br>
+          NaN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               <i>// Nan</i><br>
+          false&nbsp;&nbsp;&nbsp;&nbsp;                         <i>// false</i><br>
+          null&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                    <i>// null</i><br>
+          undefined                                             <i>// undefined</i><br>
+          if (document.all) [1]
+        </code>
+      </li>
+    </ul>
+    <div class='note note-info'>
+      <h4>Tip</h4>
+      <p>El document.all se usaba para detección de browser en el pasado
+        <a href="https://html.spec.whatwg.org/#dom-document-all"
+          target=_ "blank">HTML specification defines a willful violation</a>
+      </p>
+    </div>
+  </div>
+</article>
+
+<article class='panel panel-default'>
+  <div class='panel-heading' data-toggle='collapse' data-target='#logicalop-module'>
+    <h4 class='panel-title'>
+      Logical Operators
+      <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+    </h4>
+  </div>
+  <div class='panel-body collapse' id='logicalop-module'>
+    <p>
+      Los operadores lógicos son usados como primitivos ya que los resultados de estos dan truthy o falsy.
+    </p>
+    <ul>
+      <li>
+        <h4>! Not</h4>
+        <code>
+          ! true;&nbsp;&nbsp;&nbsp;&nbsp;                       <i>// false </i><br>
+          !0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <i>// true </i><br>
+        </code>
+      </li>
+      <li>
+        <h4>!! Double Not</h4>
+        <code>
+          !!'';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   <i>// false </i><br>
+          !!'hello';                                            <i>// true </i><br>
+          !!3;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              <i>// true </i><br>
+          !!NaN;&nbsp;&nbsp;&nbsp;&nbsp;                        <i>// false </i><br>
+          !!'false';                                            <i>// true </i><br>
+          !!'0';&nbsp;&nbsp;&nbsp;&nbsp;                        <i>// true </i>
+        </code>
+      </li>
+      <li>
+        <h4>&& And</h4>
+        <code>
+          5 + 5 === 10 && 10 > 5;&nbsp;&nbsp;     <i>// truthy </i><br>
+          6 - 5 === 1 && 2 + 2 = 5;;              <i>// falsy </i>
+        </code>
+      </li>
+
+      <li>
+        <h4>|| Or</h4>
+        <code>
+          'shoes' || 0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <i>// truthy </i><br>
+          NaN || undefined;                             <i>// falsy </i>
+        </code>
+      </li>
+      <li>
+        <h4>= Equality</h4>
+        <code>
+          const answer = 5;
+        </code>
+      </li>
+      <li>
+        <h4>== Soft Equality</h4>
+        <code>
+          "1" == true;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <i>// true </i><br>
+          "true" == true;&nbsp;&nbsp;&nbsp;                   <i>// false </i><br>
+          null == undefined;                                  <i>// true </i>
+        </code>
+      </li>
+      <li>
+        <h4>=== Hard Equality</h4>
+        <code>
+          "1" === true;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         <i>// false </i><br>
+          "true" === true;&nbsp;&nbsp;&nbsp;                        <i>// false </i><br>
+          null === undefined;                                       <i>// false </i><br>
+          NaN === NaN;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <i>// false </i><br>
+          Number.isNan(Nan);&nbsp;                                  <i>// true </i>
+        </code>
+      </li>
+      <li>
+        <h4>!= Inequality</h4>
+        <code>
+          16 != '16';&nbsp;        <i>// false </i>
+        </code>
+      </li>
+      <li>
+        <h4>!== Strict Inequality</h4>
+        <code>
+          16 !== '16';             <i>// true </i>
+        </code>
+      </li>
+      <li>
+        <h4>> Greather Than & >= Greater Than or Equal</h4>
+        <code>
+          16 > 12;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              <i>// true </i><br>
+          16 >= 12;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   <i>// true </i><br>
+          16 >= '16';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                             <i>// true </i><br>
+          8 > 8 || 8 === 8;&nbsp;&nbsp;                                                           <i>// true </i><br>
+          8 > '8' || 8 === 8;                                                                     <i>// false </i>
+        </code>
+      </li>
+      <li>
+        <h4>< Less Than & Less Than or Equal <=</h4>
+        <code>
+          16 < 12;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              <i>// false </i><br>
+          16 <= 12;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   <i>// false </i><br>
+          16 <= '16';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                             <i>// true </i><br>
+          8 < 8 || 8 === 8;&nbsp;&nbsp;                                                           <i>// true </i><br>
+          8 < '8' || 8 === 8;                                                                     <i>// false </i>
+        </code>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<div class='thanks text-center'>
+  <h3 class='lead'>Gracias por leer.</h3>
+  <hr>
+  <ul class='pager'>
+      <li>
+        <a id='next' class='main-btn pull-right' href='#' aria-label='Next'>
+          Continuar <span aria-hidden='true'>&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
 <script>
+  $(document).ready(function () {
     var url = 'lessons/js/intro.js';
     $.getScript(url);
+    $('#next').click(function () {
+      $('#includedContent').load('lessons/js/logic.html');
+    });
+  });
 </script>

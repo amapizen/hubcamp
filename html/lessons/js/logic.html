@@ -1,0 +1,210 @@
+<div class='page-header'>
+    <h1>JavaScript
+      <small>🔥 Lógica</small>
+    </h1>
+  </div>
+</div>
+
+<article class='panel panel-default'>
+  <div class='panel-heading' data-toggle='collapse' data-target='#arrays-module'>
+    <h4 class='panel-title'>
+      Arrays
+      <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+    </h4>
+  </div>
+  <div class='panel-body collapse' id='arrays-module'>
+    <p>
+      Los arrays son colección de elementos, se crean con corchetes. Los arrays son objetos.
+    </p>
+    <ul>
+      <li>
+        <h4>Arrays</h4>
+        <code>
+          const myArray = [];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>// Array literal</i><br>
+          const myArray = new Array();                                              <i>// Objeto array</i>
+        </code>
+      </li>
+      <li>
+        <h4>Modicando el array</h4>
+        <code>
+          const heroes[0]= 'Wonder Woman';                                      <i>// Agrega en el primer elemento</i><br>
+          const heroes[1]= 'Aquaman';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             <i>// Agrega en el segundo elemento</i><br>
+          const heroes[2]= 'Flash';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         <br>
+          const heroes[3]= 'Cyborg';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              <br>
+          const heroes[4]= 'Batman';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              <br>
+          heroes;                                                               <br>
+          const avengers = ['Captain America', 'Iron Man', 'Thor', 'Hulk'];<br>
+          avengers;                                                             <br>
+          delete avengers[3];&nbsp;                                                     <i>// Remueve el elemento pero lo deja vacío</i><br>
+          avengers;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <i>// El último elemento ahora esta vació</i>
+        </code>
+      </li>
+      <li>
+        <h4>Reestructurar arrays</h4>
+        <code>
+          const [x,y] = [1,2];                                                  <i>// Reestructuración permite asignar valores al mismo tiempo</i><br>
+          [x,y] = [1,2];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                    <i>// Cada variable se asigna fuera del array</i>
+        </code>
+      </li>
+      <li>
+        <h4>Propiedades y métodos</h4>
+        <code>
+          avengers.length;                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <i>// Muestra cuantos elementos tiene un array</i><br>
+          avengers[avengers.length -1];                                                                                     <i>// Muestra el último elemento</i><br>
+          avengers.push('Vision');          &nbsp;&nbsp;&nbsp;&nbsp;                                                        <i>// Agrega un elemento al final del array</i><br>
+          avengers.unshift('Ultron');       &nbsp;                                                                          <i>// Agrega un elemento al inicio del array</i><br>
+          avengers.pop();                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <i>// Remueve el último elemento del array</i><br>
+          avengers.shift();                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              <i>// Remueve el primer elemento del array</i><br>
+
+          avengers.concat(['Black Widow', 'Scarlet Witch']);                   <i>// Crea un subarray uniendolo otro</i><br>
+          avengers.join(' & ');             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <i>// Convierte un array en un string</i><br>
+          avengers.slice(2, 4);             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <i>// Crea un subarray a partir de un rango de elementos</i><br>
+          avengers.splice(5, 0, 'Falcon');  &nbsp;                                            <i>// Inserta un elemento</i><br>
+          avengers.splice(3, 1, 'Loki');    &nbsp;&nbsp;&nbsp;                                <i>// Remueve un elemento e inserta otro</i><br>
+          avengers.reverse();               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                         <i>// Invierte el orden del array</i><br>
+          avengers.filter(function);        &nbsp;&nbsp;                                                                   <i>// Filtra el array en base a una función</i><br>
+          avengers.sort();                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       <i>// Ordena el array alfabeticamente</i><br>
+          avengers.includes('Hulk', 1);     &nbsp;&nbsp;&nbsp;                                                             <i>// Busca si existe a partir de un index</i>
+        </code>
+      </li>
+      <li>
+        <h4>Arrays multidimensionales</h4>
+        <code>
+          const coordinates = [[1,3], [4,2]];&nbsp;&nbsp;&nbsp;                                                                             <i>// Un arrays de arrays</i><br>
+          coordinates [1] [0];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <i>// Accede al primer valor del segundo array</i><br>
+          const summer = ['Jun','Jul','Aug'];&nbsp;&nbsp;&nbsp;                                                                             <br>
+          const winter = ['Dec','Jan','Feb'];&nbsp;&nbsp;&nbsp;                                                                             <br>
+          const nested = [ summer, winter];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                                   <i>// Une los dos arrays en un array multidimensional</i><br>
+          const flat = [ ...summer, ...winter ];                                                                                            <i>// Une los dos arrays en un array del mismo nivel</i><br>
+        </code><br>
+        <sub>Un arrays de arrays es un array multidimensional</sub>
+      </li>
+    </ul>
+    <hr class='divider'>
+    <div class='example'>
+      <p class='lead'>Ejemplos</p>
+      <div class='well animals'>
+        <h4 class='media-heading'>Reemplaza el valor de 'gato' por otro animal</h4>
+        <blockquote>Animales: perro, gato, loro, hamster, pollo, tortuga, pez beta, gato.</blockquote>
+        <div class='blockInfo collapse'>
+          <p class='form-control'>
+            Los animales domésticos son:
+            <span class='result'></span>
+          </p>
+          <p>
+            <i class='glyphicon glyphicon-ice-lolly-tasted'></i>
+            Se busco el último valor de gato y se removió y reemplazo por otro animal.
+          </p>
+        </div>
+        <a id='btnAnimals' class='btn btn-circle btn-info'>Voy a tener suerte</a>
+      </div>
+    </div>
+
+    <div class='note note-info'>
+      <h4>Tip</h4>
+      <p>Puedes vaciar un array poniendo cero valores en su arreglo <code>array = [ ]</code> o declarando su longitud a cero<code>array.length = 0</code>.
+      </p>
+    </div>
+  </div>
+</article>
+
+<article class='panel panel-default'>
+  <div class='panel-heading' data-toggle='collapse' data-target='#sets-module'>
+    <h4 class='panel-title'>
+      Sets
+      <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+    </h4>
+  </div>
+  <div class='panel-body collapse' id='sets-module'>
+    <p>
+      Los sets son introducidos in ES6, los sets son una estructura de datos que representa una colección de valores únicos y que no pueden ser duplicados.
+    </p>
+    <ul>
+      <li>
+        <h4>Arrays</h4>
+        <code>
+          const myArray = [];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>// Array literal</i><br>
+          const myArray = new Array();                                              <i>// Objeto array</i>
+        </code>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class='panel panel-default'>
+  <div class='panel-heading' data-toggle='collapse' data-target='#maps-module'>
+    <h4 class='panel-title'>
+      Maps
+      <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+    </h4>
+  </div>
+  <div class='panel-body collapse' id='maps-module'>
+    <p>
+      Los arrays son colección de elementos, se crean con corchetes. Los arrays son objetos.
+    </p>
+    <ul>
+      <li>
+        <h4>Arrays</h4>
+        <code>
+          const myArray = [];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>// Array literal</i><br>
+          const myArray = new Array();                                              <i>// Objeto array</i>
+        </code>
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article class='panel panel-default'>
+  <div class='panel-heading' data-toggle='collapse' data-target='#maps1-module'>
+    <h4 class='panel-title'>
+      Maps
+      <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+    </h4>
+  </div>
+  <div class='panel-body collapse' id='maps1-module'>
+    <p>
+      Los arrays son colección de elementos, se crean con corchetes. Los arrays son objetos.
+    </p>
+    <ul>
+      <li>
+        <h4>Arrays</h4>
+        <code>
+          const myArray = [];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>// Array literal</i><br>
+          const myArray = new Array();                                              <i>// Objeto array</i>
+        </code>
+      </li>
+    </ul>
+  </div>
+</article>
+
+
+<div class='thanks text-center'>
+  <h3 class='lead'>Gracias por leer.</h3>
+  <hr>
+  <ul class='pager'>
+      <li>
+        <a id='previous' class='main-btn pull-left' href'#' aria-label='Previous'>
+          <span aria-hidden='true'>&laquo;</span> Regresar
+        </a>
+      </li>
+      <li>
+        <a id='next' class='main-btn pull-right' href='#' aria-label='Next'>
+          Continuar <span aria-hidden='true'>&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<script>
+  $(document).ready(function () {
+    var url = 'lessons/js/logic.js';
+    $.getScript(url);
+    $('#previous').click(function () {
+      $('#includedContent').load('lessons/js/intro.html');
+    });
+    $('#next').click(function () {
+      $('#includedContent').load('lessons/js/intro.html');
+    });
+  });
+</script>

@@ -57,17 +57,6 @@ $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh |
 
     `Install Sass using Ruby console`
 
-8. Install Lite-Server.
-
-```sh
-npm install lite-server -g
-```
-
-9. Install Gulp.
-```sh
-npm install gulp-cli -g
-```
-
 
 ** For Windows
 
@@ -91,6 +80,9 @@ npm install gulp-cli -g
 
     `Install Sass using Ruby console`
 
+
+** For OSX or Windows
+
 8. Install Lite-Server.
 
 ```sh
@@ -102,6 +94,10 @@ npm install lite-server -g
 npm install gulp-cli -g
 ```
 
+10. Install Angular-ClI.
+```sh
+npm install npm install -g @angular/cli
+```
 
 ## Running project
 

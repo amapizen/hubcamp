@@ -47,32 +47,68 @@
   .panel {
     ul {
       padding-left: 20px;
+      list-style: circle;
     }
     .panel-heading {
       border-bottom: solid 3px transparent;
-      a {
-        display: block;
-        text-decoration: none;
+      i {
+        margin-top: 2px;
+      }
+      &[data-toggle~='collapse'] {
+        &:hover {
+          cursor: pointer;
+          background: lighten(#1c5db4, 40);
+          border-color: #1c5db4;
+        }
       }
       &[aria-expanded~='true']{
-        background-color: #56d2dc;
-        border-color: darken(#56d2dc, 20);
+        background-color: #1c5db4;
+        border-color: lighten(#1c5db4, 20);
+        color: $white;
+        &:hover {
+          border-color: #1c5db4;
+          background: lighten(#1c5db4, 20);
+        }
         i:before {
           content: '\e260';
         }
-      }
-      i {
-        margin-top: 2px;
+        h4 {
+          font-weight: 600;
+        }
       }
     }
     code {
       font-family: 'Lucida Console', 'Lucida Sans Typewriter', monaco, 'Bitstream Vera Sans Mono', monospace;
-      padding: 4px 12px;
-      background: $off-white;
-      color: rgb(40, 40, 40);
+      padding: 8px 16px;
       display: inline-block;
-      border-radius: 0 0 3px 3px;
-      border-top: solid 2px $dim-grey;
+      i {
+        color: #00c200;
+        font-style: normal;
+        padding-left: 40px;
+        font-size: 90%;
+      }
+    }
+    .example {
+      padding: 8px;
+      .media-heading {
+        color: #555;
+        font-weight: bold;
+        margin: 10px auto 20px;
+      }
+      .blockInfo.sucess {
+        .form-control {
+          border: 1px solid #80D651;
+          border-left-width: 5px;
+          border-radius: 3px;
+        }
+      }
+      .form-control {
+        height: auto;
+        padding: 8px 12px;
+      }
+      .result {
+        font-weight: bold;
+      }
     }
     .note {
       padding: 8px 12px;
@@ -83,14 +119,40 @@
       h4 {
         font-weight: 600;
       }
+      &.note-sucess {
+        border-color: #80D651;
+      }
       &.note-info {
         border-color: #1b809e;
       }
+      &.note-danger {
+        border-color: #d73814;
+      }
+      &.note-warning {
+        border-color: #FEAF20;
+      }
+    }
+    .btn-circle {
+      font-weight: bold;
+      font-size: 12px;
+      padding: 6px 15px;
+      border-radius: 20px;
     }
   }
 
   .jumbotron {
     background-color: rgba(215,215,215,.8);
+  }
+  .pager {
+    li > a {
+      color: #1c5db4;
+      border-color: #1c5db4;
+      padding: 5px 18px;
+      &:hover {
+        cursor: pointer;
+        background-color: lighten(#1c5db4, 50);
+      }
+    }
   }
 
 

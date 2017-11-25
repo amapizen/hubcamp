@@ -11,9 +11,8 @@
     ],
     "license": "ISC",
     "moduleType": [],
-    "homepage": "site.hubcamp.com",
+    "homepage": "https://github.com/amapizen/hubcamp.git",
     "dependencies": {
-      "angular": "~1.5.5",
       "bootstrap": "~3.3.7",
       "jquery": "~1.9.1"
     },
