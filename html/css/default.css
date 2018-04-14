@@ -137,8 +137,10 @@ body {
 .navbar-header, .navbar-collapse {
   background-color: #ffffff; }
 
+.panel ul, .panel ol {
+  padding-left: 20px; }
+
 .panel ul {
-  padding-left: 20px;
   list-style: circle; }
 
 .panel .panel-heading {

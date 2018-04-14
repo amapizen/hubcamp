@@ -12,12 +12,38 @@
   function searchAnimal() {
     const btnAnimals = document.getElementById('btnAnimals');
 
-    const animalsListResult = document.querySelector('.animals .result');
-    animalsListResult.innerText = animalsList;
+    document.querySelector('.animals .result').innerText = animalsList;
 
     const blockInfo = document.querySelector('.animals .blockInfo');
     blockInfo.style.display ='block';
     blockInfo.className += ' sucess';
   }
   btnAnimals.addEventListener('click', searchAnimal);
+}
+
+
+
+/* IF else
+------------------------------------------*/
+{
+  function assignGrade(score) {
+    if (score >= 90)
+      return 'Muy bueno';
+    else if (score >= 80)
+      return 'Bueno';
+    else if (score >= 70)
+      return 'Regular';
+    else
+      return 'No satisfactorio';
+  }
+  function ifElse() {
+    const btnIfElse = document.getElementById('btnIfElse');
+
+    document.querySelector('.ifElse .result').innerText = assignGrade(80);
+
+    const blockInfo = document.querySelector('.ifElse .blockInfo');
+    blockInfo.style.display ='block';
+    blockInfo.className += ' sucess';
+  }
+  btnIfElse.addEventListener('click', ifElse);
 }

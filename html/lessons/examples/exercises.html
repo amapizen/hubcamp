@@ -1,0 +1,83 @@
+<div class='page-header'>
+  <h1>Ejemplos
+    <small>🔥 Demos</small>
+  </h1>
+</div>
+
+<article class='panel panel-default'>
+  <div class='panel-heading' data-toggle='collapse' data-target='#arrays-module'>
+    <h4 class='panel-title'>
+      Ejercicios
+      <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+    </h4>
+  </div>
+  <div class='panel-body collapse' id='arrays-module'>
+    <p>
+      Resuelve los siguientes problemas.
+    </p>
+    <ol>
+      <li>
+        <div class='example'>
+          <p class='lead'>Accesa a los elementos de la lista</p>
+          <div class='well favFruits'>
+            <h4 class='media-heading'>Imprime las frutas ordenadas alfabéticamente</h4>
+            <blockquote>frutas: uvas, sandía, durazno, mandarina, naranja, guayaba, papaya.</blockquote>
+            <div class='blockInfo collapse'>
+              <p class='form-control'>
+                Mis frutas favoritas son:
+                <span class='result'></span>
+              </p>
+              <p>
+                <i class='glyphicon glyphicon-ice-lolly-tasted'></i>
+                Delicious!!
+              </p>
+            </div>
+            <a id='btnFavFruits' class='btn btn-circle btn-info'>Voy a tener suerte</a>
+          </div>
+        </div>
+
+        <div class='note note-info'>
+          <h4>Tip</h4>
+          <p>Usa un lop para accesar a la lista.
+          </p>
+        </div>
+      </li>
+      <hr class='divider'>
+      <li>
+        <div class='example'>
+          <p class='lead'>Crea un triángulo de Pascal</p>
+          <div class='well makeTriangle'>
+            <h4 class='media-heading'>Crea renglones con un carácter en el primer renglón e incrementalos a 4 carácteres por renglón</h4>
+            <blockquote>Carácter usado: #</blockquote>
+            <div class='blockInfo collapse'>
+              <p class='form-control'>
+                Ve tu consola
+              </p>
+              <div class='result'></div>
+              <p>
+                <i class='glyphicon glyphicon-ice-lolly-tasted'></i>
+                Genius!!
+              </p>
+            </div>
+            <a id='btnMakeTriangle' class='btn btn-circle btn-info'>Voy a tener suerte</a>
+          </div>
+        </div>
+
+        <div class='note note-info'>
+          <h4>Tip</h4>
+          <p>Usa un lop para accesar a la lista.
+          </p>
+        </div>
+      </li>
+    </ol>
+
+
+  </div>
+</article>
+
+<script>
+  $(document).ready(function () {
+    var url = 'lessons/examples/exercises.js';
+    $.getScript(url);
+  });
+</script>

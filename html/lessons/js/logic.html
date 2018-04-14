@@ -1,8 +1,7 @@
 <div class='page-header'>
-    <h1>JavaScript
-      <small>🔥 Lógica</small>
-    </h1>
-  </div>
+  <h1>JavaScript
+    <small>🔥 Lógica</small>
+  </h1>
 </div>
 
 <article class='panel panel-default'>
@@ -121,11 +120,50 @@
     </p>
     <ul>
       <li>
-        <h4>Arrays</h4>
+        <h4>Sets</h4>
         <code>
-          const myArray = [];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>// Array literal</i><br>
-          const myArray = new Array();                                              <i>// Objeto array</i>
+          const list = new Set();
         </code>
+      </li>
+      <li>
+        <h4>Agregando valores a los Sets</h4>
+        <code>
+          list.add(1);  <br>
+          const numbers = new Set([1,2,3]); <br>
+          list.add(1).add(2).add(3).add(4).add(3);  <i>El último valor como ya existe es ignorado</i><br>
+          const arrays = new Set().add([1]).add([1]); <i>Valores diferentes</i><br>
+          const mixedTypes = new Set().add(2).add('2'); <i>Valores no son iguales</i><br>
+        </code><br>
+        <sub>Los valores de objetos no primitivos como arrays son únicos y los valores de coerción de datos como strings y números son diferentes</sub>
+      </li>
+      <li>
+        <h4>Métodos de los Sets</h4>
+        <code>
+          const jla = new Set().add('Superman').add('Batman').add('Wonder Woman');  <br>
+          jla.size; <br>
+          jla.has('Green Lantern');  <i>Devuelve false o tue</i><br>
+          jla.delete('Superman'); <i>Elimina un valor individual</i><br>
+          jla.clear(); <i>Remueve todos los valores del set</i><br>
+        </code>
+      </li>
+      <li>
+        <h4>Convirtiendo sets en arrays</h4>
+        <code>
+          const fruitsSet = new Set().add('apple').add('orange').add('banana');  <br>
+          const fruitsArrray = [...fruitsSet]; <br>
+          const fruitsArrray = Array.from(fruitsSet); <br>
+        </code>
+      </li>
+      <li>
+        <h4>Weak sets</h4>
+        <code>
+          let array = [1,2,3];  <br>
+          const strong = new Set().add(array);  <br>
+          array = null; <br>
+          strong;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>Nos devolverá el array dentro del set</i><br>
+          array = [...strong][0];
+        </code><br>
+        <sub>Cuando un objeto es agregado al set permancecerá en el set aunque se borre la referencia al objeto</sub>
       </li>
     </ul>
   </div>
@@ -140,14 +178,40 @@
   </div>
   <div class='panel-body collapse' id='maps-module'>
     <p>
-      Los arrays son colección de elementos, se crean con corchetes. Los arrays son objetos.
+      Los maps son introducidos en ES6 y sirven para guardar una relación de key y value.
     </p>
     <ul>
       <li>
-        <h4>Arrays</h4>
+        <h4>Maps</h4>
         <code>
-          const myArray = [];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>// Array literal</i><br>
-          const myArray = new Array();                                              <i>// Objeto array</i>
+          const romanNumerals = new Map();
+        </code>
+      </li>
+      <li>
+        <h4>Agregando valores a los Maps</h4>
+        <code>
+          romanNumerals.set(1,'I');  <br>
+          romanNumerals.set(2,'II').set(3,'III').set(4,'IV').set(5,'V');  <br>
+        </code><br>
+        <sub>El valor que devuelverá un key con un value conectados con un símbolo 'hash rocket' (=>)</sub>
+      </li>
+      <li>
+        <h4>Métodos de los Maps</h4>
+        <code>
+          romanNumerals.get(4);  <br>
+          romanNumerals.has(5);  <i>Checa si hay o no hay un key</i><br>
+          const heroes = new Map([ ['Clark Kent', 'Superman'], ['Bruce Wayne', 'Batman'] ]);  <i>Múltiples valores se crean con arrays</i><br>
+          heroes.size; <i>Devuelve la cantidad de elementos</i><br>
+          heroes.delete('Clark Kent'); <i>Remueve un valor</i><br>
+          heroes.clear(); <i>Remueve todos los valores</i><br>
+        </code>
+      </li>
+      <li>
+        <h4>Convirtiendo maps en arrays</h4>
+        <code>
+          const romanNumerals = new Map().set(1,'I').set(2,'II').set(3,'III').set(4,'IV').set(5,'V');  <br>
+          const romanNumeralsArray = [...romanNumerals]; <br>
+          const romanNumeralsArray = Array.from(romanNumerals); <br>
         </code>
       </li>
     </ul>
@@ -155,29 +219,208 @@
 </article>
 
 <article class='panel panel-default'>
-  <div class='panel-heading' data-toggle='collapse' data-target='#maps1-module'>
+  <div class='panel-heading' data-toggle='collapse' data-target='#if-module'>
     <h4 class='panel-title'>
-      Maps
+      If
       <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
     </h4>
   </div>
-  <div class='panel-body collapse' id='maps1-module'>
+  <div class='panel-body collapse' id='if-module'>
     <p>
-      Los arrays son colección de elementos, se crean con corchetes. Los arrays son objetos.
+      Este condicional se ejecutará si es cierta la condición.
     </p>
     <ul>
       <li>
-        <h4>Arrays</h4>
+        <h4>If</h4>
         <code>
-          const myArray = [];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>// Array literal</i><br>
-          const myArray = new Array();                                              <i>// Objeto array</i>
+          const age = 16;  <br>
+          if (age < 18);  <br>
+          console.log('Lo sentimos, no puedes entrar al antro');
         </code>
+      </li>
+      <li>
+        <h4>Else</h4>
+        <code>
+          if (age < 18);  <br>
+          console.log('Lo sentimos, no puedes entrar al antro');  <br>
+          else  <br>
+          console.log('¡Felicidads!, ya puedes pasar');  <br>
+        </code>
+      </li>
+      <li>
+        <h4>Else if</h4>
+        <code>
+          const weather = 22;  <br>
+          if (age < 20);  <br>
+          console.log('Esta fresco el clima');  <br>
+          else if (weather < 12) <br>
+          console.log('Esta frío el ambiente');  <br>
+          else  <br>
+          console.log('¡Hace calor en el ambiente!');  <br>
+        </code>
+      </li>
+      <li>
+        <h4>Ternary operator</h4>
+        <code>
+          age%2 === 0 ? console.log(age + ' es par') : console.log(age + ' es impar');  <br><br>
+          console.log(`Tu edad es:${age} y es número ${(age%2 === 0) ? 'par' : 'impar'} `); <br><br>
+          let res = ['eres menor de edad', 'eres mayor de edad', '¡Felicidades!' ]; <br>
+          console.log(`Tu edad es:${age}, ${(age<18) ? res[0] : (age>18) ? res[1] : res[2] }`);
+        </code><br>
+        <sub>El operador ternary ? funciona así: condición ? (código si es true) : (código si es false)</sub>
+      </li>
+    </ul>
+    <hr class='divider'>
+    <div class='example'>
+      <p class='lead'>Ejemplos</p>
+      <div class='well ifElse'>
+        <h4 class='media-heading'>Imprime el desempeño en base a la calificación del alumno</h4>
+        <blockquote>Calificación: 82</blockquote>
+        <div class='blockInfo collapse'>
+          <p class='form-control'>
+            Desempeño:
+            <span class='result'></span>
+          </p>
+          <p>
+            <i class='glyphicon glyphicon-ice-lolly-tasted'></i>
+            Se hizo el condicional por diferentes bloques.
+          </p>
+        </div>
+        <a id='btnIfElse' class='btn btn-circle btn-info'>Voy a tener suerte</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class='panel panel-default'>
+  <div class='panel-heading' data-toggle='collapse' data-target='#switch-module'>
+    <h4 class='panel-title'>
+      Switch
+      <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+    </h4>
+  </div>
+  <div class='panel-body collapse' id='switch-module'>
+    <p>
+      El operador switch es usado para que sea mas fácil de seguir el código.
+    </p>
+    <ul>
+      <li>
+        <h4>Switch</h4>
+        <code>
+          const score = 8;  <br><br>
+          switch(score);  <br>
+          case 10: <br>
+          console.log('Tu desempeño es excelente');  <br>
+          break;  <br>
+          case 9: <br>
+          console.log('Tu desempeño es muy bueno');  <br>
+          break;  <br>
+          case 8: <br>
+          console.log('Tu desempeño es bueno');  <br>
+          break;  <br>
+          case 7: <br>
+          console.log('Tu desempeño es regular');  <br>
+          break;  <br>
+          default: <br>
+          console.log('Tu desempeño no fue satisfactorio');  <br>
+          break;  <br>
+        </code><br>
+        <sub>La palabra default es usada al final del código y se ejecuta si ninguna condicón es cierta</sub>
       </li>
     </ul>
   </div>
 </article>
 
+<article class='panel panel-default'>
+  <div class='panel-heading' data-toggle='collapse' data-target='#while-module'>
+    <h4 class='panel-title'>
+      While
+      <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+    </h4>
+  </div>
+  <div class='panel-body collapse' id='while-module'>
+    <p>
+      Mientras sea cierta una condición, el bucle while se seguirá ejecutando.
+    </p>
+    <ul>
+      <li>
+        <h4>While</h4>
+        <code>
+          let beers = 6;  <br><br>
+          while (beers > 0) { <br>
+            console.log(`Llevas ${beers} cervezas`);  <br>
+            beers--;  <br>
+          }
+        </code>
+      </li>
+      <li>
+        <h4>Infinite Loops</h4>
+        <code>
+          while (--beers) { <br>
+            console.log(`Llevas ${beers} cervezas`);  <br>
+          }
+        </code><br>
+        <sub>Debes ser cuidadoso para evitar loops infinitos</sub>
+      </li>
+      <li>
+        <h4>Do While</h4>
+        <code>
+          let beers = 6;  <br><br>
+          do (--beers) { <br>
+            console.log(`Llevas ${beers} cervezas`);  <br>
+            beers--;  <br>
+          } while (beers > 0)
+        </code><br>
+        <sub>Es my parecido al while solo que se ejcuta el código después del bloque de código</sub>
+      </li>
+    </ul>
+  </div>
+</article>
 
+<article class='panel panel-default'>
+  <div class='panel-heading' data-toggle='collapse' data-target='#for-module'>
+    <h4 class='panel-title'>
+      For
+      <i class='glyphicon glyphicon-menu-right pull-right' aria-hidden='true'></i>
+    </h4>
+  </div>
+  <div class='panel-body collapse' id='for-module'>
+    <p>
+        El loop for se compone de tres elemntos: inicialización, condición y el después. Igual que con el while tienes que tner cuidado de no crear bucles infinitos.
+      </p>
+      <ul>
+        <li>
+          <h4>For</h4>
+          <code>
+            for (let beers = 6; beers > 0; beers--) { <br>
+              console.log(`Llevas ${beers} cervezas`);  <br>
+            }
+          </code>
+        </li>
+        <li>
+          <h4>Nested For</h4>
+          <code>
+            for (let i=1; i<4; i++) { <br>
+              for (let j=1; j<3; j++) { <br>
+                console.log(`${i} x ${j} = ${i*j}`); <br>
+              } <br>
+            }
+          </code>
+        </li>
+        <li>
+          <h4>For-of</h4>
+          <code>
+            const avengers = ['Captain America', 'Iron Man', 'Thor', 'Hulk']; <br>
+            for (constlet i=1; i<4; i++) { <br>
+              for (let j=1; j<3; j++) { <br>
+                console.log(`${i} x ${j} = ${i*j}`); <br>
+              } <br>
+            }
+          </code>
+        </li>
+      </ul>
+  </div>
+  </article>
 <div class='thanks text-center'>
   <h3 class='lead'>Gracias por leer.</h3>
   <hr>

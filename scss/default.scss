@@ -45,8 +45,10 @@
   }
 
   .panel {
-    ul {
+    ul, ol {
       padding-left: 20px;
+    }
+    ul {
       list-style: circle;
     }
     .panel-heading {
