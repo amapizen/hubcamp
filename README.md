@@ -86,12 +86,12 @@ $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh |
 8. Install Lite-Server.
 
 ```sh
-npm install lite-server -g
+npm install -g lite-server
 ```
 
 9. Install Gulp.
 ```sh
-npm install gulp-cli -g
+npm install -g gulp-cli
 ```
 
 10. Install Angular-ClI.

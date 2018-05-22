@@ -13,15 +13,24 @@
   "author": "Enrique Estrada <eestrada@hub-camp.mx>",
   "license": "ISC",
   "devDependencies": {
-    "bower": "^1.7.7",
-    "gulp": "^3.9.1",
-    "gulp-cli": "^1.4.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.3.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
+    "gulp-watch": "^4.3.11",
     "lite-server": "^2.3.0"
+  },
+  "dependencies": {
+    "bower": "^1.7.7",
+    "browser-sync": "^2.2.1",
+    "chart.js": "^2.7.1",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.4.0",
+    "pug": "^2.0.0-rc.4"
   },
   "scripts": {
     "postinstall": "bower install",
-    "prestart": "npm install"
+    "prestart": "npm install",
+    "dev": "lite-server"
   }
 }
